@@ -18,7 +18,6 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/components": ["./src/components/*"],
       "@/public/*": ["./public/*"]
     },
     "incremental": true
