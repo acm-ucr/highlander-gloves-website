@@ -11,7 +11,7 @@
 
 ## Figma
 
-[UCR Highlander Gloves Figma Design File]([https://www.figma.com/](https://www.figma.com/design/jAjrtZ1lsL4bNDkyH2IpDi/UCR-Highlander-Gloves?node-id=0-1&node-type=canvas&t=D74dVpctSZSf85tP-0))
+[UCR Highlander Gloves Figma Design File]([https://www.figma.com/design/jAjrtZ1lsL4bNDkyH2IpDi/UCR-Highlander-Gloves?node-id=0-1&node-type=canvas&t=D74dVpctSZSf85tP-0])
 
 ## Node.js
 
