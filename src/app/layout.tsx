@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps) {
         className={`${archivo_narrow.variable} ${archivo_black.variable} ${anek_telegu.variable} flex flex-col justify-between`}
       >
         <Navigation />
-        <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center bg-hlg-dark-gray text-white">
           <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         </div>
         <Footer />

@@ -1,5 +1,9 @@
 const Footer = () => {
-  return <div className="bg-red-200">Footer</div>;
+  return (
+    <div className="flex flex-row bg-hlg-red-200 font-archivo-narrow text-2xl">
+      Footer
+    </div>
+  );
 };
 
 export default Footer;
