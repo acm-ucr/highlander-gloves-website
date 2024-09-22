@@ -3,7 +3,7 @@ import FAQ from "@/components/about/FAQ";
 
 const page = () => {
   return (
-    <div>
+    <div className="flex w-full flex-col gap-10">
       <AboutUs />
       <FAQ />
     </div>
