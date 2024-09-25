@@ -11,11 +11,11 @@
 
 ## Figma
 
-[UCR Highlander Gloves Figma Design File](<[https://www.figma.com/](https://www.figma.com/design/jAjrtZ1lsL4bNDkyH2IpDi/UCR-Highlander-Gloves?node-id=0-1&node-type=canvas&t=D74dVpctSZSf85tP-0)>)
+[UCR Highlander Gloves Figma Design File](https://www.figma.com/design/jAjrtZ1lsL4bNDkyH2IpDi/UCR-Highlander-Gloves?node-id=0-1&node-type=canvas&t=D74dVpctSZSf85tP-0)
 
 ## Node.js
 
-ACM UCR Website Template runs on Node.js Version 20.10.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
+UCR Highlander Gloves Website runs on Node.js Version 20.10.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
 
 ## Next.js
 
