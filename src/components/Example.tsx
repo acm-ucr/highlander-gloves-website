@@ -9,3 +9,8 @@ const Example = (props: { txt1: string; txt2: string; txt3: string }) => {
 };
 
 export default Example;
+
+// def Example(txt1, txt2, txt3):
+//   return txt1 + txt2
+
+// Example("pokmeon", "epdoked", "peodpoekd")
