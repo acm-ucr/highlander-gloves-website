@@ -13,7 +13,7 @@ const Home = () => {
       <VolunteerOpportunities />
       <WhyVolunteer />
       <Socials />
-      <Example txt1="Highlander" txt2="Gloves" txt3="Goated" />
+      <Example txt1="Change" txt2="This" txt3="Text" />
     </div>
   );
 };
