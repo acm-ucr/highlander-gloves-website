@@ -26,7 +26,7 @@ const Navigation = () => {
           />
         </Link>
 
-        <div className="flex flex-row m-auto mr-0 space-x-8">
+        <div className="m-auto mr-0 flex flex-row space-x-8">
           {items.map((item, index) => (
             <Link
               href={item.link}
@@ -43,7 +43,7 @@ const Navigation = () => {
                   : "text-black hover:text-white"
               }`}
             >
-              <div className="flex flex-row h-full">
+              <div className="flex h-full flex-row">
                 {item.name}
                 {item.name === "MEDIA" && <IoMdArrowDropdown />}
               </div>
@@ -54,7 +54,7 @@ const Navigation = () => {
 
       {hover === "MEDIA" && (
         <div
-          className="absolute flex flex-col right-[15px] w-[115px] bg-hlg-red-300 text-center text-white"
+          className="absolute right-[15px] flex w-[115px] flex-col bg-hlg-red-300 text-center text-white"
           onMouseLeave={() => {
             setHover("");
           }}
