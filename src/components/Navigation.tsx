@@ -61,11 +61,11 @@ const Navigation = () => {
         >
           <Link
             href="/news"
-            className="hover:bg-hlg-red-600 w-full border-b-2 border-[#604949] py-2"
+            className="w-full border-b-2 border-[#604949] py-2"
           >
             NEWS
           </Link>
-          <Link href="/gallery" className="hover:bg-hlg-red-600 py-2">
+          <Link href="/gallery" className="py-2">
             GALLERY
           </Link>
         </div>
