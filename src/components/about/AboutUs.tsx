@@ -13,7 +13,7 @@ const AboutUs = () => {
       </p>
       <iframe
         src="https://www.youtube.com/embed/0FJPVFd6kgM"
-        className="aspect-video w-1/2 shadow-[15px_15px_0px_0px_#441212]"
+        className="aspect-video w-1/2 rounded border-[3px] shadow-[22px_22px_0px_0px_#441212]"
       />
     </div>
   );
