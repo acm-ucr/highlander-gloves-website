@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "@/components/Header";
+import SubHeader from "@/components/SubHeader";
 
 const Example = (props: { txt1: string }) => {
   return (
     <div className="flex w-full flex-col gap-3 text-3xl">
       {/* change to justify-end when positioning to right */}
       <div className="flex w-full justify-start">
-        <Header position="left" title={props.txt1} />
+        <SubHeader position="left" title={props.txt1} />
       </div>
     </div>
   );
