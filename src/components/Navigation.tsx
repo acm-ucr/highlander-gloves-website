@@ -11,8 +11,8 @@ const Navigation = () => {
   const [hover, setHover] = useState("");
 
   return (
-    <div className="fixed top-0 z-50 font-archivo-narrow text-2xl font-bold">
-      <div className="flex w-screen items-center justify-between bg-hlg-red-200 px-[2%]">
+    <div className="top-0 z-50 h-[8vh] font-archivo-narrow text-2xl font-bold">
+      <div className="flex h-full w-screen items-center justify-between bg-hlg-red-200 px-[2%]">
         <Link
           href="/"
           onClick={() => {
