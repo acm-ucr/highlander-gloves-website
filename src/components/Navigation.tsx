@@ -11,8 +11,8 @@ const Navigation = () => {
   const [hover, setHover] = useState("");
 
   return (
-    <div className="fixed top-0 z-50 font-archivo-narrow text-2xl font-bold">
-      <div className="flex w-screen items-center justify-between bg-hlg-red-200 px-[2%]">
+    <div className="top-0 z-50 h-[8vh] font-archivo-narrow text-2xl font-bold">
+      <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%]">
         <Link
           href="/"
           onClick={() => {
@@ -20,7 +20,7 @@ const Navigation = () => {
           }}
         >
           <Image
-            className="h-[20%] w-[20%] object-contain py-[1%]"
+            className="h-[12%] w-[12%] object-contain py-[1%]"
             src={Logo}
             alt="highlander boxing icon"
           />
