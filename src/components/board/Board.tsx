@@ -14,7 +14,7 @@ const Board = (props: { name: string; position: string }) => {
         src={logo}
         alt=""
       ></Image>
-      <div className="absolute inset-x-0 -bottom-8 font-archivo-black text-[2.5rem]">
+      <div className="absolute inset-x-0 -bottom-[1.95rem] font-archivo-black text-[2.5rem]">
         <p className="relative z-30 flex flex-col items-center text-nowrap">
           {props.name}
         </p>
