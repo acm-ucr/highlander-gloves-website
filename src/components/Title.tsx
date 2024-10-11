@@ -4,7 +4,7 @@ import Image from "next/image";
 const Title = (props: { txt: string; img: string; alt: string }) => {
   // the meet the board image is the only one thats really tall vertically so i created if statement that doesn't adjust verticle position if the img is meetTheBoard
   const imgStyle =
-    props.img === "/title/meetTheBoard.jpeg"
+    props.img === "/title/meetTheBoard.webp"
       ? {}
       : { objectPosition: "center 20%" };
 
