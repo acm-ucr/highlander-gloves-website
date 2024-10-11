@@ -15,8 +15,4 @@ export const items = [
     name: "BOARD",
     link: "board",
   },
-  {
-    name: "MEDIA",
-    link: "media",
-  },
 ];
