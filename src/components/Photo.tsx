@@ -1,22 +1,28 @@
 import React from "react";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 type photoProps = {
   // typescript-react
-  image: string;
+  image: string | StaticImageData;
   width: number;
   alt: string;
 };
 
-const Photo = ({ image, width, alt }: photoProps) => {
+const Photo = ({ image, alt, width }: photoProps) => {
   return (
-    <div className="relative px-11 pt-10">
-      <Image src={image} alt={alt} width={width} className="opacity-20" />
+    <div className="relative">
       <Image
         src={image}
         alt={alt}
         width={width}
-        className="absolute bottom-[6%] left-[6%]"
+        className="relative z-10 rounded-lg border-x border-y border-white opacity-100"
+      />
+      <Image
+        src={image}
+        alt={alt}
+        width={width}
+        className="absolute -bottom-[6%] left-[6%] z-0 rounded-lg opacity-20"
       />
     </div>
   );
