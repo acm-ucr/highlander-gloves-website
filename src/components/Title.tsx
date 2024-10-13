@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Title = (props: { txt: string; img: string; alt: string }) => {
   const imgStyle =
-    props.img === "/title/meetTheBoard.webp"
+    props.img === "/title/meetTheBoard.jpeg"
       ? {}
       : { objectPosition: "center 20%" };
 
