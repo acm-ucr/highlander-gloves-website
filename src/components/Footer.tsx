@@ -27,7 +27,7 @@ const Footer = () => {
         <p className="pl-[100%]">GLOVES</p>
       </div>
       <div className="absolute z-20 m-auto ml-[66.5%] mt-[5.5%] flex flex-col text-right font-anton text-black">
-        <p className="text-5xl">Contact Information</p>
+        <p className="text-5xl">CONTACT INFORMATION</p>
         <p className="pt-[6%]">2060 Chicago Avenue A23</p>
         <p className="pt-[3%]">Riverside, CA 92507</p>
         <p className="pt-[3%]">United States</p>
