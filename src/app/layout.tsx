@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Archivo_Narrow, Archivo_Black, Anek_Telugu } from "next/font/google";
+import { Archivo_Narrow, Archivo_Black, Anek_Telugu, Anton } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -20,6 +20,12 @@ const anek_telegu = Anek_Telugu({
   variable: "--font-anek-telegu",
 });
 
+const anton = Anton({
+  subsets: ["latin"],
+  variable: "--font-anton",
+  weight: "400",
+})
+
 export const metadata = {
   title: "UCR Highlander Gloves",
   description: "The official boxing club at UCR.",
@@ -33,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`${archivo_narrow.variable} ${archivo_black.variable} ${anek_telegu.variable} flex flex-col justify-between`}
+        className={`${archivo_narrow.variable} ${archivo_black.variable} ${anek_telegu.variable} ${anton.variable} flex flex-col justify-between`}
       >
         <Navigation />
         <div className="flex w-full flex-col items-center justify-center bg-hlg-dark-gray text-white">
