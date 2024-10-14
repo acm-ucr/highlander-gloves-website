@@ -5,6 +5,7 @@ import WhyVolunteer from "@/components/home/WhyVolunteer";
 import Socials from "@/components/home/Socials";
 import Example from "@/components/Example";
 import FormHeader from "@/components/home/FormHeader";
+import SubHeader from "@/components/SubHeader";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <WhyVolunteer />
       <Socials />
       <FormHeader txt="Form Name" />
+      <SubHeader txt="2024 USIBA Texas" />
       <Example txt1="Change" txt2="This" txt3="Text" />
     </div>
   );
