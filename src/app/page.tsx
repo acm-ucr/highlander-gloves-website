@@ -4,6 +4,7 @@ import VolunteerOpportunities from "@/components/home/VolunteerOpportunities";
 import WhyVolunteer from "@/components/home/WhyVolunteer";
 import Socials from "@/components/home/Socials";
 import Example from "@/components/Example";
+import FormHeader from "@/components/home/FormHeader";
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
       <VolunteerOpportunities />
       <WhyVolunteer />
       <Socials />
-      <Example txt1="Highlander" txt2="Gloves" txt3="Goated" />
+      <FormHeader txt="Form Name" />
+      <Example txt1="Change" txt2="This" txt3="Text" />
     </div>
   );
 };
