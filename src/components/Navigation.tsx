@@ -8,11 +8,11 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 const Navigation = () => {
   const [selected, setSelected] = useState("");
-  const [hover, setHover] = useState("");
+  const [dropDownVisible, setDropDownVisible] = useState(false);
 
   return (
-    <div className="fixed top-0 z-50 font-archivo-narrow text-2xl font-bold">
-      <div className="flex w-screen items-center justify-between bg-hlg-red-200 px-[2%]">
+    <div className="top-0 z-50 h-[8vh] font-archivo-narrow text-2xl font-bold">
+      <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%]">
         <Link
           href="/"
           onClick={() => {
@@ -20,13 +20,13 @@ const Navigation = () => {
           }}
         >
           <Image
-            className="h-[20%] w-[20%] object-contain py-[1%]"
+            className="h-[12%] w-[12%] object-contain py-[1%]"
             src={Logo}
             alt="highlander boxing icon"
           />
         </Link>
 
-        <div className="m-auto mr-0 flex flex-row space-x-8">
+        <div className="m-auto mr-0 flex flex-row space-x-8 py-1">
           {items.map((item, index) => (
             <Link
               href={item.link}
@@ -34,30 +34,39 @@ const Navigation = () => {
               onClick={() => {
                 setSelected(item.name);
               }}
-              onMouseEnter={() => {
-                setHover(item.name);
-              }}
-              className={` ${
+              className={`${
                 selected === item.name
                   ? "text-white"
                   : "text-black hover:text-white"
               }`}
             >
-              <div className="flex h-full flex-row">
-                {item.name}
-                {item.name === "MEDIA" && <IoMdArrowDropdown />}
-              </div>
+              {item.name}
             </Link>
           ))}
+          <div
+            onMouseEnter={() => {
+              setDropDownVisible(true);
+            }}
+            onMouseLeave={() => {
+              setDropDownVisible(false);
+            }}
+            className="flex h-[8vh] flex-row text-black hover:text-white"
+          >
+            MEDIA
+            <IoMdArrowDropdown />
+          </div>
         </div>
       </div>
 
-      {hover === "MEDIA" && (
+      {dropDownVisible === true && (
         <div
-          className="absolute right-[15px] flex w-[115px] flex-col bg-hlg-red-300 text-center text-white"
-          onMouseLeave={() => {
-            setHover("");
+          onMouseEnter={() => {
+            setDropDownVisible(true);
           }}
+          onMouseLeave={() => {
+            setDropDownVisible(false);
+          }}
+          className="absolute right-[10px] flex w-[110px] flex-col bg-hlg-red-300 text-center text-white"
         >
           <Link
             href="/news"
