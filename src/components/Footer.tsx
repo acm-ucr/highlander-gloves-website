@@ -13,7 +13,7 @@ const Footer = () => {
         <p className="pl-[100%]">GLOVES</p>
       </div>
       <div className="absolute z-50 m-auto ml-[66%] mt-[5%] flex flex-col text-right font-anton text-[#B5B5B5]">
-        <p className="text-5xl">Contact Information</p>
+        <p className="text-5xl">CONTACT INFORMATION</p>
         <p className="pt-[6%]">2060 Chicago Avenue A23</p>
         <p className="pt-[3%]">Riverside, CA 92507</p>
         <p className="pt-[3%]">United States</p>
