@@ -1,5 +1,10 @@
 import "./globals.css";
-import { Archivo_Narrow, Archivo_Black, Anek_Telugu, Anton } from "next/font/google";
+import {
+  Archivo_Narrow,
+  Archivo_Black,
+  Anek_Telugu,
+  Anton,
+} from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -24,7 +29,7 @@ const anton = Anton({
   subsets: ["latin"],
   variable: "--font-anton",
   weight: "400",
-})
+});
 
 export const metadata = {
   title: "UCR Highlander Gloves",

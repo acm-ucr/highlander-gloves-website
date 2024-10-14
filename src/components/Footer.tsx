@@ -5,14 +5,14 @@ import logo from "@/public/Footer.webp";
 
 const Footer = () => {
   return (
-    <div className="flex flex-row h-[375px] overflow-hidden bg-gradient-to-b from-black to-hlg-red-200 font-archivo-black text-2xl">
+    <div className="flex h-[375px] flex-row overflow-hidden bg-gradient-to-b from-black to-hlg-red-200 font-archivo-black text-2xl">
       {/* Information Text White */}
-      <div className="flex flex-col z-50 ml-10 mt-[5%] space-y-3 text-[#b5b5b5] text-3xl">
+      <div className="z-50 ml-10 mt-[5%] flex flex-col space-y-3 text-3xl text-[#b5b5b5]">
         <p>UCR</p>
         <p className="pl-[25%]">HIGHLANDER</p>
         <p className="pl-[100%]">GLOVES</p>
       </div>
-      <div className="absolute flex flex-col z-50 m-auto ml-[66%] mt-[5%] font-anton text-right text-[#B5B5B5]">
+      <div className="absolute z-50 m-auto ml-[66%] mt-[5%] flex flex-col text-right font-anton text-[#B5B5B5]">
         <p className="text-5xl">Contact Information</p>
         <p className="pt-[6%]">2060 Chicago Avenue A23</p>
         <p className="pt-[3%]">Riverside, CA 92507</p>
@@ -21,12 +21,12 @@ const Footer = () => {
       </div>
 
       {/* Information Text Black */}
-      <div className="absolute flex flex-col z-20 ml-10 mt-[5.5%] left-[0.5%] space-y-3 text-black text-3xl">
+      <div className="absolute left-[0.5%] z-20 ml-10 mt-[5.5%] flex flex-col space-y-3 text-3xl text-black">
         <p>UCR</p>
         <p className="pl-[25%]">HIGHLANDER</p>
         <p className="pl-[100%]">GLOVES</p>
       </div>
-      <div className="absolute flex flex-col z-20 m-auto ml-[66.5%] mt-[5.5%] font-anton text-right text-black">
+      <div className="absolute z-20 m-auto ml-[66.5%] mt-[5.5%] flex flex-col text-right font-anton text-black">
         <p className="text-5xl">Contact Information</p>
         <p className="pt-[6%]">2060 Chicago Avenue A23</p>
         <p className="pt-[3%]">Riverside, CA 92507</p>
@@ -39,12 +39,12 @@ const Footer = () => {
         <Image
           src={logo}
           alt="footer-logo"
-          className="relative object-contain left-[-40%] top-[22%] h-[115%] w-[115%]"
+          className="relative left-[-40%] top-[22%] h-[115%] w-[115%] object-contain"
         />
       </div>
 
       {/* Links */}
-      <div className="flex m-auto mb-0 mr-5 gap-4 p-4 items-end">
+      <div className="m-auto mb-0 mr-5 flex items-end gap-4 p-4">
         {links.map((link, index) => (
           <Link
             key={index}
@@ -56,7 +56,6 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-
     </div>
   );
 };

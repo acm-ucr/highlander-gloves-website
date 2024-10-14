@@ -7,7 +7,7 @@ module.exports = {
         "archivo-narrow": ["var(--font-archivo-narrow)"],
         "archivo-black": ["var(--font-archivo-black)"],
         "anek-telegu": ["var(--font-anek-telegu)"],
-        "anton": ["var(--font-anton)", "sans-serif"]
+        anton: ["var(--font-anton)", "sans-serif"],
       },
       colors: {
         hlg: {
