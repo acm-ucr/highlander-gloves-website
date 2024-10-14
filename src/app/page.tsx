@@ -14,6 +14,7 @@ const Home = () => {
       <VolunteerOpportunities />
       <WhyVolunteer />
       <Socials />
+      <FormHeader txt="Form Name" />
       <Example txt1="Change" txt2="This" txt3="Text" />
     </div>
   );
