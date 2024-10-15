@@ -7,31 +7,39 @@ import Button from "@/components/Button";
 const GetStarted = () => {
   return (
     <div>
-      <div className="flex flex-col justify-center text-3xl">
-        <div className="flex flex-auto">
+      <div className="flex flex-col justify-center gap-10 text-3xl">
+        <div className="flex">
           <Header position="left" title="How To Get Started" />
         </div>
 
         <div className="flex text-2xl">
-          <div className="m-20">
-            <div className="font-archivo flex flex-col">
-              Just show up and talk to our staff! All we ask is for you to sign
-              our waiver and come ready to work out! For more information check
-              out our “about us”.
+          <div className="flex w-full flex-row">
+            <div className="flex w-2/3 flex-col items-center justify-center">
+              <div className="w-5/6">
+                <div className="font-archivo flex flex-col">
+                  Just show up and talk to our staff! All we ask is for you to
+                  sign our waiver and come ready to work out! For more
+                  information check out our “about us”.
+                </div>
+                <div className="my-11 flex flex-col font-archivo-black">
+                  Waiver: ***Highlander Gloves Waiver Form (must sign before
+                  first practice!)
+                </div>
+                <div className="flex justify-center">
+                  <Button
+                    txt="WAIVER"
+                    link="https://docs.google.com/forms/d/1ztQiOcfYzYNZCAQr7l6SpXlNntt2azw3NEqeHk3y8SI/edit"
+                  />
+                </div>
+              </div>
             </div>
-            <div className="my-11 flex flex-col font-archivo-black">
-              Waiver: ***Highlander Gloves Waiver Form (must sign before first
-              practice!)
-            </div>
-            <div className="flex justify-center">
-              <Button
-                txt="WAIVER"
-                link="https://docs.google.com/forms/d/1ztQiOcfYzYNZCAQr7l6SpXlNntt2azw3NEqeHk3y8SI/edit"
+            <div className="flex flex-row items-center justify-center">
+              <Photo
+                width={"w-1/2"}
+                image={started}
+                alt="USIBA boxer holding Mexican flag"
               />
             </div>
-          </div>
-          <div className="mx-32 w-3/5">
-            <Photo image={started} alt="USIBA boxer holding Mexican flag" />
           </div>
         </div>
       </div>

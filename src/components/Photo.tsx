@@ -1,21 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import { StaticImageData } from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 type photoProps = {
-  // typescript-react
-  image: string | StaticImageData;
-  // width: string;
+  image: StaticImport;
+  width: string;
   alt: string;
 };
 
-const Photo = ({ image, alt }: photoProps) => {
+const Photo = ({ image, alt, width }: photoProps) => {
   return (
-    <div className="relative">
+    <div className={`relative ${width} flex`}>
       <Image
         src={image}
         alt={alt}
-        className="relative z-10 rounded-lg border-x border-y border-white opacity-100"
+        className="relative z-10 border-x border-y border-white opacity-100"
       />
       <Image
         src={image}
