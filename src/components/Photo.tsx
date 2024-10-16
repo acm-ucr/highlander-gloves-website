@@ -14,7 +14,7 @@ const Photo = ({ image, alt, width }: photoProps) => {
       <Image
         src={image}
         alt={alt}
-        className="relative z-10 border-x border-y border-white opacity-100"
+        className="relative z-10 rounded-lg border-x border-y border-white opacity-100"
       />
       <Image
         src={image}
