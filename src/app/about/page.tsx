@@ -1,6 +1,5 @@
 import AboutUs from "@/components/about/AboutUs";
 import FAQ from "@/components/about/FAQ";
-import Modal from "@/components/about/Modal";
 
 const page = () => {
   return (
