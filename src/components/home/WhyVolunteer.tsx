@@ -31,7 +31,7 @@ const WhyVolunteer = () => {
         </p>
 
         <div className="mt-8 flex w-full justify-center">
-          <Button txt="SIGN UP" link="/signup" />
+          <Button txt="SIGN UP" link="/volunteer" />
         </div>
       </div>
     </div>
