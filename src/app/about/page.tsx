@@ -6,8 +6,7 @@ const page = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-10">
       <AboutUs />
-      <FAQ />
-      <Modal />
+      <FAQ text="When and where is practice?" />
     </div>
   );
 };
