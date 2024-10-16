@@ -26,10 +26,7 @@ const GetStarted = () => {
                   first practice!)
                 </div>
                 <div className="flex justify-center">
-                  <Button
-                    txt="WAIVER"
-                    link="https://docs.google.com/forms/d/1ztQiOcfYzYNZCAQr7l6SpXlNntt2azw3NEqeHk3y8SI/edit"
-                  />
+                  <Button txt="WAIVER" link="/waiver" />
                 </div>
               </div>
             </div>
