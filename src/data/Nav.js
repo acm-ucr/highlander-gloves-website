@@ -9,7 +9,7 @@ export const items = [
   },
   {
     name: "FIGHT TEAM",
-    link: "fight team",
+    link: "fight-team",
   },
   {
     name: "BOARD",
