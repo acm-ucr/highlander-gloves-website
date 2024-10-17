@@ -1,11 +1,11 @@
-import AboutUs from "@/components/about/AboutUs";
-import FAQs from "@/components/about/FAQs";
+import FightTeam from "@/components/fight-team/FightTeam";
+import Gallery from "@/components/fight-team/Gallery";
 
 const page = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-10">
-      <AboutUs />
-      <FAQs />
+      <FightTeam />
+      <Gallery />
     </div>
   );
 };
