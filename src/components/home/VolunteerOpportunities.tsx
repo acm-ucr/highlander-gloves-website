@@ -19,7 +19,7 @@ const VolunteerOpportunities = () => {
           <Photo
             image={VolunteerPhoto}
             width={"w-1/2"}
-            alt="Backside head of girl watching boxing fight"
+            alt="Backside head of girl watching boxing ring fight"
           />
         </div>
         <Times />
