@@ -6,7 +6,7 @@ const VolunteerOpportunities = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center pt-10 text-3xl">
       <p className="pb-3 font-archivo-black">Volunteer Opportunities</p>
-      <div className="flex flex-col border-t-[3px] border-white w-3/12" />
+      <div className="flex w-3/12 flex-col border-t-[3px] border-white" />
       <p className="w-5/6 p-12 text-center font-anek-telegu">
         Highlander Gloves is partnered with Riverside PD to help tutor and coach
         at-risk kids around the area. As a volunteer, you'll be helping clean
