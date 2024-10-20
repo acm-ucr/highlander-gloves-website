@@ -66,15 +66,15 @@ const Navigation = () => {
           onMouseLeave={() => {
             setDropDownVisible(false);
           }}
-          className="absolute right-[10px] flex w-[110px] flex-col bg-hlg-red-300 text-center text-white"
+          className="absolute right-[10px] flex w-[110px] flex-col bg-hlg-red-300 text-center text-[#B5B5B5]"
         >
           <Link
             href="/news"
-            className="w-full border-b-2 border-[#604949] py-2"
+            className="w-full border-b-2 border-[#604949] py-2 hover:text-white"
           >
             NEWS
           </Link>
-          <Link href="/gallery" className="py-2">
+          <Link href="/gallery" className="py-2 hover:text-white">
             GALLERY
           </Link>
         </div>
