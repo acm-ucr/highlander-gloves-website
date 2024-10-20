@@ -3,7 +3,7 @@ import React from "react";
 const Header = (props: { position: string; title: string }) => {
   return (
     <div
-      className={`flex flex-row border-b-4 border-t-4 border-white p-2 pl-[5%] pr-[5%] font-archivo-black text-3xl text-white ${props.position === "left" ? "border-r-4" : "border-l-4"}`}
+      className={`text-white} flex flex-row border-2 border-white p-3 pl-[6%] pr-[6%] font-archivo-black text-xl`}
     >
       {props.title}
     </div>
