@@ -19,6 +19,9 @@ module.exports = {
         },
       },
     },
+    textShadow: {
+      default: "7px 6px 0 black",
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
 };
