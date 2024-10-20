@@ -23,5 +23,8 @@ module.exports = {
       default: "7px 6px 0 black",
     },
   },
+  rules: {
+    "@typescript-eslint/no-require-imports": "off",
+  },
   plugins: [require("tailwindcss-textshadow")],
 };
