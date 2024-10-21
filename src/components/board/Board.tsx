@@ -1,17 +1,20 @@
-import Image from "next/image";
-import logo from "@/public/example.webp";
+import Image, { StaticImageData } from "next/image";
 
-const Board = (props: { name: string; position: string }) => {
+const Board = (props: {
+  photo: StaticImageData;
+  name: string;
+  position: string;
+}) => {
   return (
     <div className="relative flex">
       <Image
         className="z-10 flex-col items-center rounded-[1.875rem] border"
-        src={logo}
+        src={props.photo}
         alt="Photo of staff"
       ></Image>
       <Image
         className="absolute inset-[10%] flex-col items-center rounded-[1.875rem] border opacity-20"
-        src={logo}
+        src={props.photo}
         alt=""
       ></Image>
       <div className="absolute inset-x-0 -bottom-[1.95rem] font-archivo-black text-[2.5rem]">
