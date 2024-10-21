@@ -1,27 +1,74 @@
 [
   {
-    "image": "@/public/example.webp",
+    "image": "@/public/board/richard.webp",
     "name": "RICHARD ZHOU",
-    "position": "PRESIDENT"
+    "position": "PRESIDENT",
+    "key": 1
+  },
+  {
+    "image": "@/public/board/gus.webp",
+    "name": "GUS WIENERS",
+    "position": "VICE PRESIDENT",
+    "key": 2
+  },
+  {
+    "image": "@/public/board/hai.webp",
+    "name": "HAI YANG",
+    "position": "TREASURER",
+    "key": 3
+  },
+  {
+    "image": "@/public/board/alexandria.webp",
+    "name": "ALEXANDRIA HERRERA",
+    "position": "PR DIRECTOR",
+    "key": 4
+  },
+  {
+    "image": "@/public/board/hesleer.webp",
+    "name": "HESLEER SILVA",
+    "position": "PR OFFICER",
+    "key": 5
+  },
+  {
+    "image": "@/public/board/jonathan.webp",
+    "name": "JONATHAN DELGADO",
+    "position": "PR OFFICER",
+    "key": 6
+  },
+  {
+    "image": "@/public/board/ivan.webp",
+    "name": "IVAN NGUYEN",
+    "position": "RBA LIAISON",
+    "key": 7
+  },
+  {
+    "image": "@/public/board/alejandro.webp",
+    "name": "ALEJANDRO SIERRAS",
+    "position": "RBA LIAISON",
+    "key": 8
+  },
+  {
+    "image": "@/public/board/elizabeth.webp",
+    "name": "ELIZABETH REYES",
+    "position": "SECRETARY",
+    "key": 9
+  },
+  {
+    "image": "@/public/eboard/rianxample.webp",
+    "name": "RIAN MCREARY",
+    "position": "CO-FIGHT TEAM CAPTAIN",
+    "key": 10
+  },
+  {
+    "image": "@/public/board/ulises.webp",
+    "name": "ULISES CERVANTES",
+    "position": "CO-FIGHT TEAM CAPTAIN",
+    "key": 10
   },
   {
     "image": "@/public/example.webp",
-    "name": "EXAMPLE",
-    "position": "EXAMPLE2"
-  },
-  {
-    "image": "@/public/example.webp",
-    "name": "EXAMPLE",
-    "position": "EXAMPLE2"
-  },
-  {
-    "image": "@/public/example.webp",
-    "name": "EXAMPLE",
-    "position": "EXAMPLE2"
-  },
-  {
-    "image": "@/public/example.webp",
-    "name": "EXAMPLE",
-    "position": "EXAMPLE2"
+    "name": "NATHAN EARWOOD",
+    "position": "AUXILIARY STAFF",
+    "key": 10
   }
 ]
