@@ -1,0 +1,27 @@
+[
+  {
+    "image": "@/public/example.webp",
+    "name": "RICHARD ZHOU",
+    "position": "PRESIDENT"
+  },
+  {
+    "image": "@/public/example.webp",
+    "name": "EXAMPLE",
+    "position": "EXAMPLE2"
+  },
+  {
+    "image": "@/public/example.webp",
+    "name": "EXAMPLE",
+    "position": "EXAMPLE2"
+  },
+  {
+    "image": "@/public/example.webp",
+    "name": "EXAMPLE",
+    "position": "EXAMPLE2"
+  },
+  {
+    "image": "@/public/example.webp",
+    "name": "EXAMPLE",
+    "position": "EXAMPLE2"
+  }
+]
