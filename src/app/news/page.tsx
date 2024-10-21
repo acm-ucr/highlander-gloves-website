@@ -3,6 +3,7 @@ import banner from "@/public/title/upcomingEvents.webp";
 import image1 from "@/public/news/NewsCorey.webp";
 import image2 from "@/public/news/NewsMcCreary.webp";
 import image3 from "@/public/news/NewsPerez.webp";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -148,12 +149,12 @@ const page = () => {
         </div>
         <div className="flex flex-row justify-center gap-2 py-10">
           <p className="font-bold">The Highlander News Article:</p>
-          <a
+          <Link
             href="https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/"
             className="underline"
           >
             https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/
-          </a>
+          </Link>
         </div>
       </div>
     </div>
