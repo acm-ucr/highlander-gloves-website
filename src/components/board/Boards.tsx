@@ -1,6 +1,6 @@
+import React from "react";
 import Board from "./Board";
 import BoardMembers from "@/data/BoardMembers.json";
-import Example from "@/public/example.webp";
 
 const Boards = () => {
   return (
@@ -8,9 +8,11 @@ const Boards = () => {
       {BoardMembers.map((Member) => (
         <Board
           key={Member.key}
-          photo={Example}
+          photo={Member.image}
           name={Member.name}
           position={Member.position}
+          width={348}
+          height={376}
         />
       ))}
     </div>
