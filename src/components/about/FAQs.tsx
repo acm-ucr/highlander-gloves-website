@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from "@/components/Header";
+import FAQ from "@/components/about/FAQ"
 
 const FAQs = () => {
   return (
@@ -9,8 +10,7 @@ const FAQs = () => {
           <Header position="left" title="FAQs" />
         </div>
 
-        <div className='bg-hlg-red-200 w-2/5 h-96 shadow-[22px_30px_0px_0px_#441212] flex justify-center items-center text-4xl font-archivo-black text-center'>
-          When and where is practice?</div>
+        <FAQ text="When and where is practice?"/>
         
     </div>
   );
