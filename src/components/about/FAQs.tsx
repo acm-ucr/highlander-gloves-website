@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/components/Header";
 import FAQ from "@/components/about/FAQ";
-import faqs from "@/data/FAQ";
+import faqs from "@/data/Faq";
 
 const FAQs = () => {
   return (
