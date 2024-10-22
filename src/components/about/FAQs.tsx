@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "@/components/Header";
 import FAQ from "@/components/about/FAQ"
+import faqs from '@/data/FAQ';
 
 const FAQs = () => {
   return (
@@ -10,7 +11,11 @@ const FAQs = () => {
           <Header position="left" title="FAQs" />
         </div>
 
-        <FAQ text="When and where is practice?"/>
+      <div className='grid grid-cols-2 m-16'>
+        {faqs.map((faq, index) => (
+          <FAQ key={index} text={faq.question} />
+        ))}
+    </div>
         
     </div>
   );
