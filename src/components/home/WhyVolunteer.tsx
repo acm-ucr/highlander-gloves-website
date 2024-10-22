@@ -9,7 +9,7 @@ const WhyVolunteer = () => {
       </div>
 
       <div className="mx-auto mt-6 w-full max-w-6xl text-left font-anek-telegu text-3xl">
-        <p className="mb-20">
+        <p className="mb-3">
           In order to become a fully fledged member of Highlander Gloves, you
           will need to volunteer at least twice. Furthermore, volunteering with
           us at RBA is a great thing to include on your resume, an amazing way
@@ -18,7 +18,7 @@ const WhyVolunteer = () => {
         </p>
       </div>
 
-      <div className="mx-auto mt-6 w-full max-w-6xl text-center font-anek-telegu text-3xl">
+      <div className="mx-auto mt-3 w-full max-w-6xl text-center font-anek-telegu text-3xl">
         <p className="mb-16 text-center">
           <b>Don’t have a ride?</b> No worries! We can help arrange a ride for
           you whenever possible. Just ask a staff member or reach out to us via
