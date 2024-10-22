@@ -11,22 +11,25 @@ type EventProps = {
 const eventData: EventProps[] = [
   {
     name: "Event Name 1",
-    description: "small description small description, small description, small description",
+    description:
+      "small description small description, small description, small description",
     location: "Location Here",
     time: "Time",
     side: "left",
   },
   {
     name: "Event Name 2",
-    description: "small description, small description, small description, small description",
-    location: "Location Here",
+    description:
+      "small description, small description, small description, small description",
+    location: "Location 2 Here",
     time: "Time",
     side: "right",
   },
   {
     name: "Event Name 3",
-    description: "small description, small description, small description, small description",
-    location: "Location Here",
+    description:
+      "small description, small description, small description, small description",
+    location: "Location 3 Here",
     time: "Time",
     side: "left",
   },
