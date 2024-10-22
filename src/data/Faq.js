@@ -1,36 +1,36 @@
 const faqs = [
   {
     question: "When and where is practice?",
-    answer: ""
+    answer: "",
   },
   {
     question: "Do you need to be experienced to join and participate?",
-    answer: ""
+    answer: "",
   },
   {
     question: "What should you bring?",
-    answer: ""
+    answer: "",
   },
   {
     question: "What does practice look like?",
-    answer: ""
+    answer: "",
   },
   {
     question: "How much are dues?",
-    answer: ""
+    answer: "",
   },
   {
     question: "Need shuttling?",
-    answer: ""
+    answer: "",
   },
   {
     question: "Boxing / Gym Etiquette",
-    answer: ""
+    answer: "",
   },
   {
     question: "Do we spar?",
-    answer: ""
-  }
+    answer: "",
+  },
 ];
 
 export default faqs;
