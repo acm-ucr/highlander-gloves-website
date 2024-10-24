@@ -11,12 +11,12 @@ const Board = (props: {
         className="z-10 flex-col items-center rounded-[1.875rem] border"
         src={props.photo}
         alt="Photo of staff"
-      ></Image>
+      />
       <Image
         className="absolute inset-[10%] flex-col items-center rounded-[1.875rem] border opacity-20"
         src={props.photo}
-        alt=""
-      ></Image>
+        alt="Shadow of photo"
+      />
       <div className="absolute inset-x-0 -bottom-[1.95rem] font-archivo-black text-[2.5rem]">
         <p className="relative z-30 flex flex-col items-center text-nowrap">
           {props.name}
