@@ -7,6 +7,7 @@ module.exports = {
         "archivo-narrow": ["var(--font-archivo-narrow)"],
         "archivo-black": ["var(--font-archivo-black)"],
         "anek-telegu": ["var(--font-anek-telegu)"],
+        anton: ["var(--font-anton)", "sans-serif"],
       },
       colors: {
         hlg: {
@@ -18,6 +19,9 @@ module.exports = {
         },
       },
     },
+    textShadow: {
+      default: "7px 6px 0 black",
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-textshadow")],
 };
