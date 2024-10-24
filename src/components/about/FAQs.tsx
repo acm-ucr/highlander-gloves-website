@@ -7,7 +7,6 @@ const FAQs = () => {
   return (
     <div className="relative w-full">
       <div className="flex justify-start text-xl">
-        <div className=""></div>
         <Header position="left" title="FAQs" />
       </div>
 
