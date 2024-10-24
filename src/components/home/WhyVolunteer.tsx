@@ -3,8 +3,11 @@ import Button from "@/components/Button";
 
 const WhyVolunteer = () => {
   return (
-    <div className="flex w-full flex-col items-start justify-start">
-      <div className="flex w-full justify-start">
+    <div className="flex w-full flex-col items-start justify-start md:items-center">
+      <div className="flex w-full justify-center md:hidden">
+        <Header position="middle" title="WHY SHOULD I VOLUNTEER?" />
+      </div>
+      <div className="hidden w-full justify-start md:flex">
         <Header position="left" title="WHY SHOULD I VOLUNTEER?" />
       </div>
 
@@ -26,11 +29,11 @@ const WhyVolunteer = () => {
           Volunteering is located at the same place as our practices, 2060
           Chicago Ave.
         </p>
-        <p className="mb-6 text-center text-2xl italic">
+        <p className="text-center text-xs text-hlg-light-gray md:text-lg lg:text-2xl">
           For any issues, please reach out to a staff member.
         </p>
 
-        <div className="mt-8 flex w-full justify-center">
+        <div className="mt-4 flex w-full justify-center">
           <Button txt="SIGN UP" link="/volunteer" />
         </div>
       </div>
