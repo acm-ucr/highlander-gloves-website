@@ -4,7 +4,7 @@ import { Members } from "@/data/BoardMembers";
 
 const Boards = () => {
   return (
-    <div className="grid grid-cols-3 gap-[10%] p-[10%] pb-[50%] pt-[8%]">
+    <div className="grid grid-cols-2 gap-x-[15%] gap-y-[6%] p-[10%] pb-[90%] pt-[8%] md:grid-cols-3 md:gap-[10%] md:pb-[50%]">
       {Members.map((Member) => (
         <div className="max-w-[348px]">
           <Board
