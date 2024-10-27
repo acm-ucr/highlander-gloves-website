@@ -8,21 +8,26 @@ import Link from "next/link";
 const page = () => {
   return (
     <div>
-      <div className="relative flex flex-row text-3xl">
-        <div className="font-archivo absolute bottom-[10%] left-[5%] flex flex-col">
+      <div className="relative flex flex-row text-xs md:text-3xl">
+        <div className="font-archivo absolute bottom-[18%] left-[5%] flex flex-col md:bottom-[10%]">
           <div className="font-bold">
             Knocking out the competition one punch at a time
           </div>
-          <div className="py-3 text-xl italic">
+          <div className="text-[10px] italic md:py-3 md:text-xl">
             Highlander Gloves holds aspirations for winning a title at
             Nationals.
           </div>
-          <div className="text-sm">By Mamata Elangovan - March 12, 2024</div>
+          <div className="text-[10px] md:text-sm">
+            By Mamata Elangovan - March 12, 2024
+          </div>
+        </div>
+        <div className="absolute bottom-[5%] left-[48%] md:hidden">
+          <div className="border-l-[7px] border-r-[7px] border-t-[5px] border-l-transparent border-r-transparent" />
         </div>
         <Image className="w-screen" src={banner} alt="News" />
       </div>
-      <div className="mx-[12%] my-10 flex flex-col">
-        <div className="flex justify-center justify-items-center">
+      <div className="mx-[8%] my-5 flex flex-col md:mx-[12%] md:my-10">
+        <div className="flex justify-center justify-items-center text-[10px] md:text-base">
           The University of California, Riverside’s (UCR), Highlander Gloves, a
           boxing club, has achieved success in national competitions, including
           the women winning the United States Intercollegiate Boxing Association
@@ -35,10 +40,12 @@ const page = () => {
         <Image
           src={image1}
           alt="Joab Corey punching boxing bag"
-          className="pt-10"
+          className="pt-5 md:pt-10"
         />
-        <p className="pt-2 text-xs italic">Joab Corey Coaching Gloves Member</p>
-        <div className="flex flex-col justify-center justify-items-center gap-6 pt-8">
+        <p className="flex justify-center justify-items-center pt-2 text-[8px] italic md:justify-start md:text-sm">
+          Joab Corey Coaching Gloves Member
+        </p>
+        <div className="flex flex-col justify-center justify-items-center gap-3 pt-5 text-[10px] md:gap-6 md:pt-8 md:text-base">
           <p>
             Economics Associate Professor Joab Corey, coach and faculty advisor
             of Highlander Gloves since 2017, shared how in the 2022-2023 season
@@ -77,13 +84,13 @@ const page = () => {
             can.”
           </p>
         </div>
-        <div className="flex flex-row justify-center justify-items-center">
+        <div className="flex-row justify-center justify-items-center md:flex">
           <Image
             src={image2}
             alt="Rian McCreary holding a championship belt"
-            className="size-1/2 pt-10"
+            className="py-8 md:size-1/2 md:pt-12"
           />
-          <div className="ml-8 flex flex-col justify-center gap-6">
+          <div className="flex flex-col justify-center gap-6 text-[10px] md:ml-8 md:text-base">
             <p>
               The Fight Team Captain, Rian McCreary, has also been boxing at the
               university for about two years now. To prepare for the tournament
@@ -106,8 +113,13 @@ const page = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-row justify-center justify-items-center">
-          <div className="mr-8 flex flex-col justify-center gap-6">
+        <div className="flex-row justify-center justify-items-center md:flex">
+          <Image
+            src={image3}
+            alt="Benjamin Perez holding a championship belt"
+            className="flex py-8 md:order-2 md:size-1/3 md:py-0"
+          />
+          <div className="flex flex-col justify-center gap-6 text-[10px] md:order-1 md:mr-8 md:text-base">
             <p>
               The Highlander Gloves President, Benjamin Perez is pumped up for
               his redemption arc at the tournament this year. This year he is
@@ -141,21 +153,16 @@ const page = () => {
               championship belts.
             </p>
           </div>
-          <Image
-            src={image3}
-            alt="Benjamin Perez holding a championship belt"
-            className="size-1/3 pt-10"
-          />
         </div>
-        <div className="flex flex-row justify-center gap-2 py-10">
-          <p className="font-bold">The Highlander News Article:</p>
-          <Link
-            href="https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/"
-            className="underline"
-          >
-            https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/
-          </Link>
-        </div>
+      </div>
+      <div className="flex flex-row justify-center gap-2 pb-4 text-[6px] md:pb-10 md:text-base">
+        <p className="font-bold">The Highlander News Article:</p>
+        <Link
+          href="https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/"
+          className="underline"
+        >
+          https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/
+        </Link>
       </div>
     </div>
   );
