@@ -1,3 +1,5 @@
+"use client";
+import { useQuery } from "@tanstack/react-query";
 import Event from "@/components/events/Event";
 
 type EventProps = {
@@ -8,38 +10,66 @@ type EventProps = {
   side: "left" | "right";
 };
 
-const eventData: EventProps[] = [
-  {
-    name: "Event Name 1",
-    description:
-      "small description small description, small description, small description",
-    location: "Location Here",
-    time: "Time",
-    side: "left",
-  },
-  {
-    name: "Event Name 2",
-    description:
-      "small description, small description, small description, small description",
-    location: "Location 2 Here",
-    time: "Time",
-    side: "right",
-  },
-  {
-    name: "Event Name 3",
-    description:
-      "small description, small description, small description, small description",
-    location: "Location 3 Here",
-    time: "Time",
-    side: "left",
-  },
-];
+type ApiEvent = {
+  summary?: string;
+  description?: string;
+  location?: string;
+  start: {
+    dateTime?: string;
+    date?: string;
+  };
+  end: {
+    dateTime?: string;
+    date?: string;
+  };
+};
+
+const fetchEvents = async (): Promise<EventProps[]> => {
+  const response = await fetch(
+    `https://www.googleapis.com/calendar/v3/calendars/${
+      process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL
+    }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}
+    &singleEvents=true&orderBy=startTime&timeMin=${new Date().toISOString()}`,
+  );
+
+  if (!response.ok) {
+    throw new Error("Error fetching events");
+  }
+
+  const data = await response.json();
+
+  return (data.items || [])
+    .map((item: ApiEvent, index: number) => ({
+      name: item.summary || "Unnamed Event",
+      description: item.description || "No description available.",
+      location: item.location || "No location specified.",
+      time: item.start.dateTime
+        ? new Date(item.start.dateTime).toLocaleString()
+        : item.start.date
+          ? new Date(item.start.date).toLocaleString()
+          : "No time available",
+      side: index % 2 === 0 ? "left" : "right",
+    }))
+    .slice(0, 3);
+};
 
 const Events = () => {
+  const {
+    data: events = [],
+    error,
+    isLoading,
+  } = useQuery<EventProps[], Error>({
+    queryKey: ["events"],
+    queryFn: fetchEvents,
+  });
+
+  if (isLoading) return <p>Loading events...</p>;
+  if (error) return <p>Error fetching events: {error.message}</p>;
+
   return (
     <div className="flex w-full flex-col font-anek-telegu text-3xl">
       <div className="mt-8">
-        {eventData.map((event, index) => (
+        {events.map((event, index) => (
           <Event key={index} {...event} />
         ))}
       </div>
