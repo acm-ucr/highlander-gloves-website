@@ -30,7 +30,7 @@ const Navigation = () => {
           }}
         >
           <Image
-            className="h-[12%] w-[12%] object-contain py-[1%]"
+            className="h-[20%] w-[20%] object-contain py-[1%]"
             src={Logo}
             alt="highlander boxing icon"
           />
