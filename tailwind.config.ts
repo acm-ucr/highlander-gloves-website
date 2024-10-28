@@ -21,6 +21,7 @@ module.exports = {
     },
     textShadow: {
       default: "7px 6px 0 black",
+      footerMobile: "4px 3px 0 black",
     },
   },
   plugins: [require("tailwindcss-textshadow")],
