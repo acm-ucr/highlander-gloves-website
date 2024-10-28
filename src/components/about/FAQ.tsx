@@ -1,6 +1,6 @@
 const FAQ = (props: { text: string }) => {
   return (
-    <div className="align-center m-8 flex aspect-[4/3] w-1/5 flex-col justify-center bg-hlg-red-200 p-8 text-center font-anek-telegu text-xl font-semibold leading-tight text-white shadow-[22px_22px_0px_0px_#441212]">
+    <div className="md:align-center m-4 my-6 flex flex-row justify-center bg-hlg-red-200 p-8 text-center font-archivo-black text-base font-semibold leading-tight text-white shadow-[22px_22px_0px_0px_#441212] md:m-8 md:aspect-[4/3] md:flex-col md:text-4xl">
       {props.text}
     </div>
   );
