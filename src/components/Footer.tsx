@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
 
       {/* Links */}
-      <div className="m-auto mb-0 mr-3 flex items-end gap-2 p-4 pr-0 md:mr-5 md:gap-4">
+      <div className="m-auto mb-0 mr-3 flex items-end gap-2 p-4 pr-0 transition-transform duration-300 hover:-translate-y-1 md:mr-5 md:gap-4">
         {links.map((link, index) => (
           <Link
             key={index}
