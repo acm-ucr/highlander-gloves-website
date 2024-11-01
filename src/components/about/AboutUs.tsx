@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="flex w-3/4 flex-col items-center justify-center gap-10 text-3xl 2xl:w-2/3">
+    <div className="mt-10 flex w-3/4 flex-col items-center justify-center gap-10 text-3xl 2xl:w-2/3">
       <p className="indent-16 font-archivo-black">
         Welcome to the official boxing club at UCR. We introduce our fellow UCR
         students the fundamentals of the sport of boxing in order to provide not
