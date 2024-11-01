@@ -21,7 +21,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="top-0 z-50 h-[8vh] font-archivo-narrow text-2xl font-bold">
+    <div className="top-0 z-50 h-[10vh] font-archivo-narrow text-2xl font-bold">
       <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%] py-[0.8%]">
         <Link
           href="/"
@@ -30,7 +30,7 @@ const Navigation = () => {
           }}
         >
           <Image
-            className="h-[18%] w-[18%] object-contain py-[1%]"
+            className="w-[15%] object-contain"
             src={Logo}
             alt="highlander boxing icon"
           />
