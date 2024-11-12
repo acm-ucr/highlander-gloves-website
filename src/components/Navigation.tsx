@@ -42,7 +42,7 @@ const Navigation = () => {
         </div>
 
         {/* desktop menu options */}
-        <div className="m-auto mr-0 hidden flex-row space-x-8 py-1 md:flex">
+        <div className="m-auto mr-0 hidden h-full flex-row items-center space-x-8 md:flex">
           {items.map((item, index) => (
             <Link
               href={item.link}
@@ -66,7 +66,7 @@ const Navigation = () => {
             onMouseLeave={() => {
               setDropDownVisible(false);
             }}
-            className="flex h-[8vh] flex-row text-black hover:text-white"
+            className="flex h-full flex-row items-center text-black hover:text-white"
           >
             MEDIA
             <IoMdArrowDropdown />
