@@ -8,6 +8,7 @@ import {
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const archivo_narrow = Archivo_Narrow({
   subsets: ["latin"],
@@ -48,7 +49,10 @@ export default function RootLayout({ children }: LayoutProps) {
       >
         <Navigation />
         <div className="flex w-full flex-col items-center justify-center bg-hlg-dark-gray text-white">
-          <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+          <ReactQueryClientProvider>
+            <Toaster />
+            {children}
+          </ReactQueryClientProvider>
         </div>
         <Footer />
       </body>
