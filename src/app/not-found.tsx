@@ -19,7 +19,7 @@ const NotFound = () => {
           </p>
           <p className="relative font-archivo-black text-9xl">404</p>
         </div>
-        <p className="relative pb-10 pt-4 font-archivo-narrow text-[130px]">
+        <p className="relative pb-10 pt-4 font-archivo-narrow text-[8.125rem]">
           Page Not Found
         </p>
         <div className="relative">
