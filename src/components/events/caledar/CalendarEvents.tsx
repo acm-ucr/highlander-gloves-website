@@ -78,8 +78,8 @@ function CalendarEvents({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ...props }) => <IoMdPlay className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <IoMdPlay className="h-4 w-4" />,
+        IconLeft: () => <IoMdPlay className="h-4 w-4" />,
+        IconRight: () => <IoMdPlay className="h-4 w-4" />,
       }}
     />
   );
