@@ -5,7 +5,6 @@ import { IoMdPlay } from "react-icons/io";
 import { DayPicker, DateFormatter } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/events/caledar/button";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
@@ -36,7 +35,6 @@ function CalendarEvents({
   className,
   classNames,
   showOutsideDays = true,
-  ...props
 }: CalendarProps) {
   return (
     <DayPicker
@@ -83,7 +81,6 @@ function CalendarEvents({
         IconLeft: ({ ...props }) => <IoMdPlay className="h-4 w-4" />,
         IconRight: ({ ...props }) => <IoMdPlay className="h-4 w-4" />,
       }}
-      {...props}
     />
   );
 }
