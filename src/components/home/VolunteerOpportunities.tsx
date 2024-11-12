@@ -18,7 +18,7 @@ const VolunteerOpportunities = () => {
         <div className="hidden items-center justify-center sm:flex">
           <Photo
             image={VolunteerPhoto}
-            width={"w-1/2"}
+            width={"w-1/2 lg: w-3/4"}
             alt="Backside head of girl watching boxing ring fight"
           />
         </div>

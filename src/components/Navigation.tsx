@@ -21,8 +21,8 @@ const Navigation = () => {
   };
 
   return (
-    <div className="top-0 z-50 h-[8vh] font-archivo-narrow text-2xl font-bold">
-      <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%]">
+    <div className="top-0 z-50 h-[10vh] font-archivo-narrow text-2xl font-bold">
+      <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%] py-[0.8%]">
         <Link
           href="/"
           onClick={() => {
@@ -30,7 +30,7 @@ const Navigation = () => {
           }}
         >
           <Image
-            className="h-[12%] w-[12%] object-contain py-[1%]"
+            className="w-[15%] object-contain"
             src={Logo}
             alt="highlander boxing icon"
           />
@@ -42,7 +42,7 @@ const Navigation = () => {
         </div>
 
         {/* desktop menu options */}
-        <div className="m-auto mr-0 hidden flex-row space-x-8 py-1 md:flex">
+        <div className="m-auto mr-0 hidden h-full flex-row items-center space-x-8 md:flex">
           {items.map((item, index) => (
             <Link
               href={item.link}
@@ -66,7 +66,7 @@ const Navigation = () => {
             onMouseLeave={() => {
               setDropDownVisible(false);
             }}
-            className="flex h-[8vh] flex-row text-black hover:text-white"
+            className="flex h-full flex-row items-center text-black hover:text-white"
           >
             MEDIA
             <IoMdArrowDropdown />
