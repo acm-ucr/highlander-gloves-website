@@ -52,7 +52,7 @@ const Footer = () => {
             key={index}
             href={link.link}
             target="_blank"
-            className="text-4xl"
+            className="transform text-4xl transition hover:-translate-y-1"
           >
             {link.icon}
           </Link>
