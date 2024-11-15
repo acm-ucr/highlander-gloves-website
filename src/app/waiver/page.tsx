@@ -16,9 +16,9 @@ const Page = () => {
 
   if (isSubmitted) {
     return (
-      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 font-archivo-black text-4xl">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 font-archivo-black text-2xl md:text-4xl">
         {/* <FormHeader txt="WAIVER SUBMIITED" /> */}
-        <Image src={logo} alt="Logo" className="w-[14%]" />
+        <Image src={logo} alt="Logo" className="w-[20%] md:w-[14%]" />
         Waiver Submitted
       </div>
     );
@@ -43,54 +43,54 @@ const Page = () => {
           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfS4aJMDkT38HO6gdTpiS6ucxbZ84SJOMWLGQGbCBbxQ9BlsA/formResponse"
           onSubmit={() => (window.submitted = true)}
           target="hidden_iframe"
-          className="mt-5 w-[45%] space-y-4"
+          className="mt-5 w-[78%] space-y-4 md:w-[63%] lg:w-[45%]"
         >
           {/* Name Field */}
           <div>
-            <label className="mb-1 block font-archivo-black text-3xl font-bold uppercase">
+            <label className="mb-1 block font-archivo-black text-lg font-bold uppercase md:text-2xl lg:text-3xl">
               Boxer Name*
             </label>
             <input
               name="entry.431336764"
               type="text"
               placeholder="Your Name"
-              className="w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-xl text-white focus:outline-none"
+              className="text-md w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-white focus:outline-none md:text-xl"
               required
             />
           </div>
 
           {/* Net ID Field */}
           <div>
-            <label className="mb-1 block font-archivo-black text-3xl font-bold uppercase">
+            <label className="mb-1 block font-archivo-black text-lg font-bold uppercase md:text-2xl lg:text-3xl">
               What is your NetID (ex: JDoe123)*
             </label>
             <input
               name="entry.494196135"
               type="text"
               placeholder="Your Net ID"
-              className="w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-xl text-white focus:outline-none"
+              className="text-md w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-white focus:outline-none md:text-xl"
               required
             />
           </div>
 
           {/* Emergency Contact Field */}
           <div>
-            <label className="mb-1 block font-archivo-black text-3xl font-bold uppercase">
+            <label className="mb-1 block font-archivo-black text-lg font-bold uppercase md:text-2xl lg:text-3xl">
               Emergency Contact Name and Phone number*
             </label>
             <input
               name="entry.2143124600"
               type="text"
               placeholder="Your Emergency Contact"
-              className="mb-10 w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-xl text-white focus:outline-none"
+              className="text-md mb-10 w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-white focus:outline-none md:text-xl"
               required
             />
           </div>
 
           {/* Terms and Agreements */}
-          <div className="mt-5 font-archivo-narrow text-2xl">
+          <div className="mt-5 font-archivo-narrow text-lg md:text-2xl">
             <p className="font-bold">Before you box- Go to the front desk:</p>
-            <ul className="text-xl">
+            <ul className="text-sm md:text-xl">
               <li>- Sign in upon entrance</li>
               <li>- Check in.out any borrowed gear</li>
               <li>
@@ -102,7 +102,7 @@ const Page = () => {
             <p className="mt-2 font-bold">
               Before you box- Go to the front desk:
             </p>
-            <ul className="text-xl">
+            <ul className="text-sm md:text-xl">
               <li>- Shirts must be worn on the gym floor at all times.</li>
               <li>- No cursing or foul language on the premises</li>
               <li>
@@ -127,7 +127,7 @@ const Page = () => {
               </li>
             </ul>
             <p className="mt-2 font-bold">Ethics and Dicipline</p>
-            <ul className="text-xl">
+            <ul className="text-sm md:text-xl">
               <li>
                 - Do not use your newly acquired skills outside of the gym. We
                 are not here to teach you to harm others.
@@ -142,7 +142,7 @@ const Page = () => {
               </li>
             </ul>
             <p className="mt-2 font-bold">Infractions</p>
-            <ul className="text-xl">
+            <ul className="text-sm md:text-xl">
               <li>
                 - All Students are expected to abide by the rules within
                 tutoring and training.
@@ -176,15 +176,18 @@ const Page = () => {
               className="mr-5 h-7 w-7 border-4 border-white hover:cursor-pointer"
               required
             />
-            <label htmlFor="certify1" className="font-archivo-narrow text-2xl">
+            <label
+              htmlFor="certify1"
+              className="text-md font-archivo-narrow md:text-2xl"
+            >
               I certify that I have read and understand the rules and
               regulations*
             </label>
           </div>
 
-          <div className="mt-5 font-archivo-narrow text-2xl">
+          <div className="mt-5 font-archivo-narrow text-lg md:text-2xl">
             <p className="font-bold">Waiver of Liability</p>
-            <ul className="text-xl">
+            <ul className="text-sm md:text-xl">
               <li>
                 ~ I (we), individually (or as Parent/Guardian(s) if applicable),
                 understand and apprecite that participation in sports carries a
@@ -223,12 +226,15 @@ const Page = () => {
               className="mr-5 h-7 w-7 border-4 border-white hover:cursor-pointer"
               required
             />
-            <label htmlFor="certify2" className="font-archivo-narrow text-2xl">
+            <label
+              htmlFor="certify2"
+              className="text-md font-archivo-narrow md:text-2xl"
+            >
               I certify I have read and understand the Waiver of Liability*
             </label>
           </div>
 
-          <div className="mt-5 font-archivo-narrow text-xl">
+          <div className="mt-5 font-archivo-narrow text-sm md:text-xl">
             I (we) (or as the Parent/Guardian of the applicant) , hereby consent
             to the membership of said applicant at RAINCROSS BOXING ACADEMY, to
             which this form applies and for myself (oursleves) , my (our) heirs,
@@ -248,17 +254,20 @@ const Page = () => {
               className="mr-5 h-7 w-7 border-4 border-white text-hlg-dark-gray hover:cursor-pointer"
               required
             />
-            <label htmlFor="certify3" className="font-archivo-narrow text-2xl">
+            <label
+              htmlFor="certify3"
+              className="text-md font-archivo-narrow md:text-2xl"
+            >
               I certify I have read and understand the Waiver*
             </label>
           </div>
 
           {/* Signature Field */}
           <div className="mt-4">
-            <label className="mb-1 mt-[10%] block font-archivo-black text-3xl font-bold uppercase">
+            <label className="mb-1 mt-[10%] block font-archivo-black text-lg font-bold uppercase md:text-2xl lg:text-3xl">
               Signature (or Parent/Guardian Signature)*
             </label>
-            <p className="ml-2 font-archivo-narrow text-2xl">
+            <p className="ml-2 font-archivo-narrow text-lg md:text-2xl">
               By typing your name in the space below, you agree to the rules and
               conditions above.
             </p>
@@ -266,7 +275,7 @@ const Page = () => {
               name="entry.837808459"
               type="text"
               placeholder="Your Signature"
-              className="w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-xl text-white focus:outline-none"
+              className="text-md w-full border-b bg-hlg-dark-gray p-2 font-archivo-black text-white focus:outline-none md:text-xl"
               required
             />
           </div>
