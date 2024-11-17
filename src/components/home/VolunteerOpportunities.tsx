@@ -15,10 +15,10 @@ const VolunteerOpportunities = () => {
         free to show up! We'd love all the help we can get!
       </p>
       <div className="flex w-full flex-row py-2 sm:py-10">
-        <div className="hidden items-center justify-center sm:flex">
+        <div className="hidden justify-center sm:flex md:mx-8 md:mt-24 md:h-full md:w-3/5 lg:my-10 lg:w-full">
           <Photo
             image={VolunteerPhoto}
-            width={"w-1/2 lg: w-3/4"}
+            width={""}
             alt="Backside head of girl watching boxing ring fight"
           />
         </div>
