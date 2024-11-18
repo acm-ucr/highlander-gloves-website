@@ -21,7 +21,7 @@ const page = () => {
       <div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 font-archivo-black text-4xl">
         {/* <FormHeader txt="WAIVER SUBMIITED" /> */}
         <Image src={logo} alt="Logo" className="w-[14%]" />
-        Volunteer Form Submitted
+        Volunteer Form Submitted!
       </div>
     );
   }
