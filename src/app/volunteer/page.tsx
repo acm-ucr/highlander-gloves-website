@@ -19,7 +19,6 @@ const page = () => {
   if (isSubmitted) {
     return (
       <div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 font-archivo-black text-4xl">
-        {/* <FormHeader txt="WAIVER SUBMIITED" /> */}
         <Image src={logo} alt="Logo" className="w-[14%]" />
         Volunteer Form Submitted!
       </div>
@@ -39,9 +38,81 @@ const page = () => {
           }
         }}
       ></iframe>
-      {/* // dont forget to switch link back to the original one not the FAKE volunteer form */}
-      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-4 p-4 text-white">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-2 p-4 text-white">
         <FormHeader txt="Volunteer Form" />
+        <div className="mt-5 w-2/4 text-2xl font-bold">
+          What do we do while volunteering?
+        </div>
+        <div className="px-[25%]">
+          Highlander Gloves is partnered with Riverside PD to help tutor at-risk
+          kids around the area, while also coaching them in boxing. As a
+          volunteer, you'll usually be helping clean the facility, tutoring
+          kids, and helping run boxing drills. Even if you have little to no
+          experience, we'll show you the ropes, so please feel free to show up!
+          We'd love all the help we can get!
+        </div>
+        <div className="w-2/4 text-2xl font-bold">
+          What if I don't have a ride?
+        </div>
+        <div className="px-[25%]">
+          No worries! We can help arrange a ride for you whenever possible. Just
+          ask a staff member on discord for help, and we'll get you situated.
+        </div>
+        <div className="w-2/4 text-2xl font-bold">Times:</div>
+        <div className="px-[25%]">
+          Tuesdays: 4:00 pm - 6:00 pm <br />
+          Wednesdays: 4:00 pm - 6:00 pm
+          <br />
+          Thursdays: 5:00 pm - 6:30 pm <br />
+          (P.S. Thursdays will consist of only boxing, so more experienced
+          members, this is your time to shine!)
+        </div>
+        <div className="w-2/4 text-2xl font-bold">Why should I volunteer?</div>
+        <div className="px-[25%]">
+          In order to become a fully fledged member of Highlander Gloves, you
+          will need to volunteer at least twice. Furthermore, volunteering with
+          us at RBA is a great thing to include on your resume, an amazing way
+          to give back to the community, and most importantly, is a whole lot of
+          fun!
+        </div>
+        <div className="w-2/4 text-2xl font-bold">Requirements:</div>
+        <div className="px-[25%] pb-4">
+          In order to volunteer, RBA mandates that you complete the following SA
+          course, as well as fill out the following Volunteer Application Form.
+          Please fill out the form once you've earned your certificate from the
+          SA course, and send a digital copy of your certificate as well as a
+          digital scan of the filled out application to the following google
+          form:
+        </div>
+        <div className="px-[25%]">
+          SA Course:
+          <a
+            href="https://sexual-harassment-prevention-training.calcivilrights.ca.gov/NonSupervisoryEnglish/story.html"
+            className="text-blue-400 hover:text-hlg-red-100"
+          >
+            {" "}
+            https://sexual-harassment-prevention-training.calcivilrights.ca.gov/NonSupervisoryEnglish/story.html{" "}
+          </a>
+          <br />
+          Volunteer Application Form:
+          <a
+            href="https://drive.google.com/file/d/1YhRfyr34C5Cyzk_Lezwqsr-LDB9S-zb0/view?usp=sharing"
+            className="text-blue-400 hover:text-hlg-red-100"
+          >
+            {" "}
+            https://drive.google.com/file/d/1YhRfyr34C5Cyzk_Lezwqsr-LDB9S-zb0/view?usp=sharing
+          </a>
+          <br />
+          Certificate/Application Submission Form:
+          <a
+            href="https://forms.gle/pV145wZrLtrqWnth7"
+            className="text-blue-400 hover:text-hlg-red-100"
+          >
+            {" "}
+            https://forms.gle/pV145wZrLtrqWnth7
+          </a>
+        </div>
+
         <form
           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScItUJcJ7aH6Iz8eLC0bxpzxbRr4u5trZeou8Uu5z2qLLSRTQ/formResponse"
           onSubmit={() => (window.submitted = true)}
@@ -102,13 +173,13 @@ const page = () => {
               <input
                 name="entry.111141012"
                 type="radio"
-                id="yess"
+                id="shuttle"
                 placeholder="option1"
                 className="h-[10] w-4 border-x-hlg-red-300"
                 required
               />
               <label
-                htmlFor="yess"
+                htmlFor="shuttle"
                 className="block w-full p-2 font-archivo-black text-sm text-white md:text-lg"
               >
                 Yes, and I'd be willing to help shuttle others
