@@ -18,7 +18,6 @@ const VolunteerOpportunities = () => {
         <div className="hidden justify-center sm:flex md:mx-8 md:mt-24 md:h-full md:w-3/5 lg:my-10 lg:w-full">
           <Photo
             image={VolunteerPhoto}
-            width=""
             alt="Backside head of girl watching boxing ring fight"
           />
         </div>
