@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
       <div className="absolute z-50 m-auto ml-[46%] mt-[5.65%] flex flex-col text-right font-anton text-[12px] text-[#B5B5B5] text-shadow-footerMobile md:ml-[66%] md:mt-[5%] md:text-2xl md:text-shadow 2xl:ml-[77%] 2xl:mt-[3%]">
         <p className="md:text-5xl">CONTACT INFORMATION</p>
-        <p className="pt-[6%]">2060 Chicago Avenue A23</p>
+        <p className="pt-[6%]">1760 Chicago Avenue</p>
         <p className="pt-[3%]">Riverside, CA 92507</p>
         <p className="pt-[3%]">United States</p>
         <p className="pt-[3%]">email: highlandergloves14@gmail.com</p>
