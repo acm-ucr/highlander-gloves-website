@@ -63,7 +63,13 @@ const Events = () => {
     queryFn: fetchEvents,
   });
 
-  if (isLoading) return <p>Loading events...</p>;
+  if (isLoading)
+    return (
+      <p className="flex w-full flex-row justify-center font-archivo-black text-6xl text-red-300">
+        {" "}
+        Loading events...
+      </p>
+    );
   if (error) return <p>Error fetching events: {error.message}</p>;
 
   return (
