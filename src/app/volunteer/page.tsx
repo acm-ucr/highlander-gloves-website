@@ -12,6 +12,7 @@ import FormHeader from "@/components/home/FormHeader";
 import FormButton from "@/components/FormButton";
 import logo from "@/public/logo.webp";
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -38,7 +39,7 @@ const page = () => {
           }
         }}
       ></iframe>
-      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-2 p-4 text-white">
+      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-2 p-4 font-archivo-narrow text-white">
         <FormHeader txt="Volunteer Form" />
         <div className="mt-5 w-2/4 text-2xl font-bold">
           What do we do while volunteering?
@@ -59,7 +60,7 @@ const page = () => {
           ask a staff member on discord for help, and we'll get you situated.
         </div>
         <div className="w-2/4 text-2xl font-bold">Times:</div>
-        <div className="px-[25%]">
+        <div className="w-2/4">
           Tuesdays: 4:00 pm - 6:00 pm <br />
           Wednesdays: 4:00 pm - 6:00 pm
           <br />
@@ -86,31 +87,31 @@ const page = () => {
         </div>
         <div className="px-[25%]">
           SA Course:
-          <a
+          <Link
             href="https://sexual-harassment-prevention-training.calcivilrights.ca.gov/NonSupervisoryEnglish/story.html"
-            className="text-blue-400 hover:text-hlg-red-100"
+            className="text-blue-400 hover:text-blue-500"
           >
             {" "}
-            https://sexual-harassment-prevention-training.calcivilrights.ca.gov/NonSupervisoryEnglish/story.html{" "}
-          </a>
+            https://sexual-harassment-prevention-training.calcivilrights.ca.gov/NonSupervisoryEnglish/story.html
+          </Link>
           <br />
           Volunteer Application Form:
-          <a
+          <Link
             href="https://drive.google.com/file/d/1YhRfyr34C5Cyzk_Lezwqsr-LDB9S-zb0/view?usp=sharing"
-            className="text-blue-400 hover:text-hlg-red-100"
+            className="text-blue-400 hover:text-blue-500"
           >
             {" "}
             https://drive.google.com/file/d/1YhRfyr34C5Cyzk_Lezwqsr-LDB9S-zb0/view?usp=sharing
-          </a>
+          </Link>
           <br />
           Certificate/Application Submission Form:
-          <a
+          <Link
             href="https://forms.gle/pV145wZrLtrqWnth7"
-            className="text-blue-400 hover:text-hlg-red-100"
+            className="text-blue-400 hover:text-blue-500"
           >
             {" "}
             https://forms.gle/pV145wZrLtrqWnth7
-          </a>
+          </Link>
         </div>
 
         <form
