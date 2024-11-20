@@ -9,7 +9,6 @@ import {
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Variable } from "lucide-react";
 
 const archivo_narrow = Archivo_Narrow({
   subsets: ["latin"],
