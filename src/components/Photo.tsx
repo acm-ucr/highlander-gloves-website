@@ -4,11 +4,11 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 type photoProps = {
   image: StaticImport;
-  width: string;
+  width?: string;
   alt: string;
 };
 
-const Photo = ({ image, alt, width }: photoProps) => {
+const Photo = ({ image, alt, width = "" }: photoProps) => {
   return (
     <div className={`relative ${width} flex`}>
       <Image
