@@ -23,8 +23,8 @@ const GetStarted = () => {
                   information check out our “about us”.
                 </div>
                 <div className="my-5 flex flex-col font-archivo-black md:my-11">
-                  Waiver: ***Highlander Gloves Waiver Form (must sign before
-                  first practice!)
+                  Waiver: Highlander Gloves Waiver Form (must sign before first
+                  practice!)
                 </div>
                 <div className="flex justify-center">
                   <Button txt="WAIVER" link="/waiver" />
