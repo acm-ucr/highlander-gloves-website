@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Gallery } from "react-grid-gallery";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
 
 import image1 from "@/public/gallery/image1.png";
 import image2 from "@/public/gallery/image2.png";
@@ -98,13 +96,6 @@ const images: ImageProps[] = importedImages.map((image, index) => ({
 }));
 
 const GalleryComponent = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
-
-  const handleImageClick = (index: number) => {
-    setPhotoIndex(index);
-    setIsOpen(true);
-  };
 
   return (
     <div className="w-full">
@@ -112,21 +103,7 @@ const GalleryComponent = () => {
         <p className="py-1 font-archivo-black">2023 - 2024</p>
         <div className="flex w-36 flex-col border-t-[2px] border-white pb-3" />
       </div>
-      <Gallery images={images} onClick={(index) => handleImageClick(index)} />
-      {isOpen && (
-        <Lightbox
-          mainSrc={images[photoIndex].src}
-          nextSrc={images[(photoIndex + 1) % images.length].src}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + images.length - 1) % images.length)
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % images.length)
-          }
-        />
-      )}
+      <Gallery images={images}/>
     </div>
   );
 };
