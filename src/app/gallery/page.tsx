@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
 import { Gallery } from "react-grid-gallery";
+import React from "react";
 
 import image1 from "@/public/gallery/image1.png";
 import image2 from "@/public/gallery/image2.png";
@@ -96,14 +96,13 @@ const images: ImageProps[] = importedImages.map((image, index) => ({
 }));
 
 const GalleryComponent = () => {
-
   return (
     <div className="w-full">
       <div className="flex flex-col items-center justify-center">
         <p className="py-1 font-archivo-black">2023 - 2024</p>
         <div className="flex w-36 flex-col border-t-[2px] border-white pb-3" />
       </div>
-      <Gallery images={images}/>
+      <Gallery images={images} />
     </div>
   );
 };
