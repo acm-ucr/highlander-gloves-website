@@ -1,4 +1,4 @@
-import { CalendarEvents } from "@/components/events/caledar/CalendarEvents";
+import { CalendarEvents } from "@/components/ui/calendar";
 import Image from "next/image";
 import page from "@/public/events/calendarbackground.webp";
 
@@ -7,15 +7,19 @@ const year = date.getFullYear();
 
 const Calendar = () => {
   return (
-    <div className="mb-20 flex w-full flex-col items-center justify-center">
-      <div className="absolute right-[35.85%] top-[30%] z-0 h-[25%] w-[25%]">
+    <div className="flex h-full w-screen flex-col items-center justify-center">
+      <div className="absolute right-[7.75%] top-[44%] z-0">
         <Image alt="background" src={page} className="object-contain" />
       </div>
-      <div className="absolute top-[18.5%] z-20 flex flex-row space-x-4 text-2xl">
-        C C C C C C C C C C C C
+      <div className="absolute top-[14%] z-20 flex flex-row space-x-10 font-asap-condensed text-7xl">
+        {Array.from({ length: 12 }).map((_, index: number) => (
+          <p key={index}>C</p>
+        ))}
       </div>
-      <div className="absolute top-[24%] z-20 font-archivo-black">{year}</div>
-      <CalendarEvents className="z-10" />
+      <div className="absolute top-[29%] z-20 font-archivo-black text-5xl">
+        {year}
+      </div>
+      <CalendarEvents className="z-10 h-[70vw] w-[70vw] rounded-xl bg-hlg-red-300 p-3 font-archivo-black" />
     </div>
   );
 };

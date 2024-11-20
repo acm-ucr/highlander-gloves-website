@@ -28,7 +28,7 @@ function captionMonth(month: Date) {
     "NOV",
     "DEC",
   ];
-  return months[month.getMonth() - 1];
+  return months[month.getMonth()];
 }
 
 function CalendarEvents({
@@ -43,32 +43,26 @@ function CalendarEvents({
         formatWeekdayName: formatWeekdayLabel,
         formatCaption: captionMonth,
       }}
-      className={cn(
-        "rounded-md bg-hlg-red-300 p-3 font-archivo-black",
-        className,
-      )}
+      className={cn(className)}
       classNames={{
-        months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
-        month: "space-y-4",
+        months: "flex flex-col",
+        month: "px-[5%] pt-[15%]",
         caption:
-          "absolute bg-black rounded-md top-[9%] mx-[32%] flex justify-center relative items-center",
-        caption_label: "text-[9px] p-2 font-medium",
+          "absolute flex bg-[#1E1E1E] rounded-xl h-[4vw] w-[14vw] top-[39%] right-[42.25%] justify-center items-center",
+        caption_label: "text-3xl p-2 font-medium",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
-          "h-7 w-7 bg-transparent p-0 opacity-100 hover:opacity-50",
+          "h-[2vw] w-[2vw] bg-transparent p-0 opacity-100 hover:opacity-50",
         ),
         nav_button_previous: "absolute scale-x-[-1] left-[-4%]",
         nav_button_next: "absolute right-[-4%]",
-        table: "w-10 h-10 rounded-md bg-hlg-light-gray space-y-1",
-        head_row: "flex text-[9px]",
+        table: "w-full space-y-[1vw] rounded-xl bg-hlg-light-gray",
+        head_row: "flex w-full aspect-[7/1] text-2xl text-center items-center",
         head_cell:
-          "text-hlg-red-200 border border-hlg-red-300 font-bold w-full h-10 flex items-center justify-center",
+          "text-hlg-red-200 border border-hlg-red-300 font-bold w-full h-full flex items-center justify-center",
         row: "flex w-full mt-0",
-        cell: "h-10 w-10 text-center text-sm p-0 border border-hlg-red-300 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-neutral-100/50 [&:has([aria-selected])]:bg-neutral-100 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
-        day: "h-10 w-10 p-0 m-auto text-hlg-red-200 font-normal",
-        day_range_end: "day-range-end",
-        day_selected:
-          "bg-neutral-900 text-neutral-50 hover:bg-neutral-900 hover:text-neutral-50 focus:bg-neutral-900 focus:text-neutral-50",
+        cell: "relative text-center text-3xl p-0 border border-hlg-red-300",
+        day: "h-[9vw] w-[8.75vw] text-hlg-red-200 font-normal",
         day_today: "bg-hlg-red-200 text-white",
         day_outside: "day-outside text-bg-hlg-red-200 opacity-[57%]",
         day_disabled: "text-neutral-500 opacity-50",

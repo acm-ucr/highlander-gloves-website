@@ -9,6 +9,7 @@ module.exports = {
         "archivo-black": ["var(--font-archivo-black)"],
         "anek-telegu": ["var(--font-anek-telegu)"],
         anton: ["var(--font-anton)", "sans-serif"],
+        "asap-condensed": ["var(--font-asap-condensed)"],
       },
       colors: {
         hlg: {
