@@ -48,7 +48,7 @@ function CalendarEvents({
         months: "flex flex-col",
         month: "px-[5%] pt-[15%]",
         caption:
-          "absolute flex bg-[#1E1E1E] rounded-xl h-[4vw] w-[14vw] top-[39%] right-[42.25%] justify-center items-center",
+          "absolute flex bg-[#1E1E1E] rounded-xl h-[4vw] w-[14vw] top-[42%] right-[42.25%] justify-center items-center",
         caption_label: "text-3xl p-2 font-medium",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
