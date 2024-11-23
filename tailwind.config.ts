@@ -31,5 +31,9 @@ module.exports = {
       footerMobile: "4px 3px 0 black",
     },
   },
-  plugins: [require("tailwindcss-textshadow"), require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-textshadow"),
+    require("tailwindcss-animate"),
+    require("tailwindcss-animated"),
+  ],
 };
