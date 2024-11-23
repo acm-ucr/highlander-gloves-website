@@ -13,7 +13,7 @@ const Times = () => {
         <p className="pb-6 text-center text-lg sm:text-right sm:text-3xl">
           Tuesdays: 4:00 pm - 6:00 pm <br />
           Wednesdays: 4:00 pm - 6:00 pm <br />
-          Thursdays: 4:30 pm - 6:30 pm <br />
+          Thursdays: 5:00 pm - 6:30 pm <br />
         </p>
         <p className="text-center text-sm sm:text-right sm:text-2xl">
           (P.S. Thursdays will consist of only boxing, so more experienced
