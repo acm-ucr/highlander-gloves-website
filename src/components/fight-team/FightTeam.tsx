@@ -13,10 +13,10 @@ const FightTeam = () => {
       <div className="flex text-center md:text-left md:text-2xl">
         <div className="flex w-full flex-col md:flex-row">
           <div className="mt-4 flex w-full items-center justify-center justify-self-center md:hidden">
-            <Photo width={"w-1/3"} image={coach} alt="Coach Israel Salgado" />
+            <Photo width={"w-1/3"} webp={coach} alt="Coach Israel Salgado" />
           </div>
           <div className="mt-4 hidden w-full items-center justify-center justify-self-center md:order-last md:flex md:size-auto md:items-center">
-            <Photo width={"w-2/3"} image={coach} alt="Coach Israel Salgado" />
+            <Photo width={"w-2/3"} webp={coach} alt="Coach Israel Salgado" />
           </div>
           <div className="flex flex-col items-center justify-center md:w-3/5">
             <div className="w-4/6">
