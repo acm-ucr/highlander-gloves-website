@@ -12,7 +12,6 @@ const Boards = () => {
             photo={Member.image}
             name={Member.name}
             position={Member.position}
-            delay={Member.delay}
           />
         </div>
       ))}

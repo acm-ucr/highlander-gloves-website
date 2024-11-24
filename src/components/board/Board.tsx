@@ -6,7 +6,6 @@ const Board = (props: {
   photo: StaticImageData;
   name: string;
   position: string;
-  delay: number;
 }) => {
   const slideleft = {
     hidden: { opacity: 0, x: 50 },
@@ -19,7 +18,7 @@ const Board = (props: {
   return (
     <motion.div
       variants={slideleft}
-      transition={{ duration: 0.5, delay: props.delay }}
+      transition={{ duration: 0.5 }}
       className="relative z-10 flex"
       initial="hidden"
       whileInView="show"
