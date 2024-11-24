@@ -65,7 +65,7 @@ const Events = () => {
 
   if (isLoading)
     return (
-      <p className="flex w-full flex-row justify-center font-archivo-black text-6xl text-red-300">
+      <p className="flex w-full flex-row justify-center font-archivo-black text-6xl text-hlg-red-100">
         {" "}
         Loading events...
       </p>
