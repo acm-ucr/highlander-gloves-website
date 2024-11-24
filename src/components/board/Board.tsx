@@ -1,16 +1,34 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 const Board = (props: {
   photo: StaticImageData;
   name: string;
   position: string;
+  delay: number;
 }) => {
+  const slideleft = {
+    hidden: { opacity: 0, x: 50 },
+    show: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
   return (
-    <div className="relative flex">
+    <motion.div
+      variants={slideleft}
+      transition={{ duration: 0.5, delay: props.delay }}
+      className="relative z-10 flex"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <Image
         className="z-10 flex-col items-center rounded-[15px] border md:rounded-[30px]"
         src={props.photo}
-        alt="Photo of staff"
+        alt={`${props.name} photo`}
       />
       <Image
         className="absolute inset-[8%] flex-col items-center rounded-[15px] border opacity-20 md:inset-[10%] md:rounded-[30px]"
@@ -33,7 +51,7 @@ const Board = (props: {
           {props.position}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
