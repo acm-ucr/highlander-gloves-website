@@ -176,24 +176,27 @@ const page = () => {
             alt="Rian McCreary holding a championship belt"
             className="py-8 md:size-1/2 md:pt-12"
           />
-          <div className="flex flex-col justify-center gap-6 text-[10px] md:ml-8 md:text-base" ref={section3Ref}>
+          <div
+            className="flex flex-col justify-center gap-6 text-[10px] md:ml-8 md:text-base"
+            ref={section3Ref}
+          >
             <motion.p
               className=""
               initial={{ opacity: 0, y: 20 }}
               animate={isSection3InView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-                The Fight Team Captain, Rian McCreary, has also been boxing at the
-                university for about two years now. To prepare for the tournament
-                she has been staying behind after practice to do extra drills and
-                build up her strength. Last year was McCreary’s first time
-                competing at the USIBA tournament, and she got three fights out of
-                the tournament. However, in her last match, she lost by split
-                decision, with the judges unable to come to a consensus for who
-                had actually won the match. This year McCreary is in the same
-                weight class as the girl she had lost the match against and looks
-                forward to a rematch.
-              </motion.p>
+              The Fight Team Captain, Rian McCreary, has also been boxing at the
+              university for about two years now. To prepare for the tournament
+              she has been staying behind after practice to do extra drills and
+              build up her strength. Last year was McCreary’s first time
+              competing at the USIBA tournament, and she got three fights out of
+              the tournament. However, in her last match, she lost by split
+              decision, with the judges unable to come to a consensus for who
+              had actually won the match. This year McCreary is in the same
+              weight class as the girl she had lost the match against and looks
+              forward to a rematch.
+            </motion.p>
 
             <motion.p
               className=""
@@ -209,7 +212,6 @@ const page = () => {
               not work and is working on getting better with each day.
             </motion.p>
           </div>
-
         </div>
         <div className="flex-row justify-center justify-items-center md:flex">
           <Image
@@ -219,8 +221,11 @@ const page = () => {
           />
 
           {/* section 4 */}
-          <div className="flex flex-col justify-center gap-6 text-[10px] md:order-1 md:mr-8 md:text-base" ref={section4Ref}>
-          <motion.p
+          <div
+            className="flex flex-col justify-center gap-6 text-[10px] md:order-1 md:mr-8 md:text-base"
+            ref={section4Ref}
+          >
+            <motion.p
               className=""
               initial={{ opacity: 0, y: 20 }}
               animate={isSection4InView ? { opacity: 1, y: 0 } : {}}
