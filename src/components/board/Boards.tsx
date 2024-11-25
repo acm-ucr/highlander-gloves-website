@@ -9,7 +9,7 @@ const Boards = () => {
         <div className="max-w-[348px]" key={Member.key}>
           <Board
             key={Member.key}
-            photo={Member.image}
+            photo={Member.webp}
             name={Member.name}
             position={Member.position}
           />
