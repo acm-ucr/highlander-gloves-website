@@ -1,5 +1,5 @@
 import { CalendarEvents } from "@/components/ui/calendar";
-import Image from "next/webp";
+import Image from "next/image";
 import page from "@/public/events/calendarbackground.webp";
 
 const date = new Date();

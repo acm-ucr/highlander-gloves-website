@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/webp";
+import Image from "next/image";
 import { links } from "@/data/Footer";
 import logo from "@/public/Footer.webp";
 import { usePathname } from "next/navigation";

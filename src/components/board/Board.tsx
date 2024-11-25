@@ -1,5 +1,5 @@
 "use client";
-import Image, { StaticImageData } from "next/webp";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
 const Board = (props: {
