@@ -34,7 +34,7 @@ const GetStarted = () => {
             <div className="mt-5 flex justify-center md:my-0 md:flex-row md:items-center">
               <Photo
                 width={"w-1/2"}
-                image={started}
+                webp={started}
                 alt="USIBA boxer holding Mexican flag"
               />
             </div>
