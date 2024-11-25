@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/webp";
 
 const Board = (props: {
   photo: StaticImageData;
