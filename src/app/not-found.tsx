@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/webp";
 import Button from "@/components/Button";
 import Logo from "@/public/Footer.webp";
 import Link from "next/link";
