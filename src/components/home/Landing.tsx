@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/webp";
 import banner from "@/public/home/landing.webp";
 
 const Landing = () => {
