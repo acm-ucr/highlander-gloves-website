@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/webp";
 import banner from "@/public/title/upcomingEvents.webp";
 import webp1 from "@/public/news/NewsCorey.webp";
 import webp2 from "@/public/news/NewsMcCreary.webp";
