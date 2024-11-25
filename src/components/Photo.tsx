@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/webp";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 type photoProps = {
