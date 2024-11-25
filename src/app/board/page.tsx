@@ -1,5 +1,5 @@
 import Boards from "@/components/board/Boards";
-import Image from "next/image";
+import Image from "next/webp";
 import line from "@/public/board/line.svg";
 
 const page = () => {

@@ -1,7 +1,7 @@
 "use client";
 import Logo from "@/public/logo.webp";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/webp";
 import { items } from "@/data/Nav.js";
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
