@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "When and where is practice?",
     answer:
-      "Practice is located at Raincross Boxing Academy on 2060 Chicago Ave. Practice is Mon, Tues, and Thurs from 7:30-9pm and Wednesday from 8-9:30pm.",
+      "Practice is located at Raincross Boxing Academy on 1760 Chicago Ave. Practice is Mon, Tues, Wed, and Thurs from 7:45 pm - 9:15 pm.",
   },
   {
     question: "Do you need to be experienced to join and participate?",
@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What should you bring?",
     answer:
-      "We provide boxing gloves, wraps (if dues are paid), and headgear. Therefore all you need is water and clothes you don't mind getting dirty.",
+      "We provide boxing gloves, wraps (if dues are paid), and headgear. All you need is water and clothes you don't mind getting dirty.",
   },
   {
     question: "What does practice look like?",
@@ -42,7 +42,7 @@ const faqs = [
   {
     question: "Do we spar?",
     answer:
-      "Yes! We do provide opportunities to spar at our gym. However, you must have your own mouthguard and it is recommended to get your gloves. On top of this sparring is a privilege, if you do not respect our gym or staff you will not be allowed to spar. For more information, please check out our Discord.",
+      "Yes! We do provide opportunities to spar at our gym. However, you must have your own mouthguard and it is recommended to get your own gloves. On top of this, sparring is a privilege. If you do not respect our gym or staff you will not be allowed to spar. For more information, please check out our Discord.",
   },
 ];
 
