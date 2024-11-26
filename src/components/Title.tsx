@@ -14,7 +14,7 @@ const Title = ({ webp, alt, txt }: photoProps) => {
 
       <div className="absolute inset-0 flex items-center justify-center font-archivo-black">
         <div className="max-w-[800px] text-center">
-          <div className="animate-jump-in text-9xl font-bold text-white drop-shadow-[20px_15px_0_#000000]">
+          <div className="animate-jump-in text-9xl font-bold text-white drop-shadow-[20px_15px_0_#000000] duration-300">
             {txt}
           </div>
         </div>
