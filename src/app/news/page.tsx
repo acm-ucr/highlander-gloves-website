@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import banner from "@/public/title/upcomingEvents.webp";
-import image1 from "@/public/news/NewsCorey.webp";
-import image2 from "@/public/news/NewsMcCreary.webp";
-import image3 from "@/public/news/NewsPerez.webp";
+import webp1 from "@/public/news/NewsCorey.webp";
+import webp2 from "@/public/news/NewsMcCreary.webp";
+import webp3 from "@/public/news/NewsPerez.webp";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useInView } from "framer-motion";
@@ -88,7 +88,7 @@ const page = () => {
         </motion.div>
 
         <Image
-          src={image1}
+          src={webp1}
           alt="Joab Corey punching boxing bag"
           className="pt-5 md:pt-10"
         />
@@ -172,7 +172,7 @@ const page = () => {
         {/* section 3 */}
         <div className="flex-row justify-center justify-items-center md:flex">
           <Image
-            src={image2}
+            src={webp2}
             alt="Rian McCreary holding a championship belt"
             className="py-8 md:size-1/2 md:pt-12"
           />
@@ -215,7 +215,7 @@ const page = () => {
         </div>
         <div className="flex-row justify-center justify-items-center md:flex">
           <Image
-            src={image3}
+            src={webp3}
             alt="Benjamin Perez holding a championship belt"
             className="flex py-8 md:order-2 md:size-1/3 md:py-0"
           />
