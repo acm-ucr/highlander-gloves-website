@@ -15,7 +15,9 @@ const Footer = () => {
     "/board",
     "/board",
     "/gallery",
-    "news",
+    "/news",
+    "/waiver",
+    "/volunteer",
   ];
   if (!paths.includes(pathname)) {
     return null;

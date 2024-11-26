@@ -8,7 +8,9 @@ import Modal from "@/components/about/Modal";
 type faq = {
   question: string;
   answer: string | string[];
+  delay: number;
 };
+
 const FAQs = () => {
   const [selectedFAQ, setSelectedFAQ] = useState<faq | null>(null);
 
@@ -37,6 +39,7 @@ const FAQs = () => {
             key={index}
             text={faq.question}
             onClick={() => handleFAQClick(faq)}
+            delay={faq.delay}
           />
         ))}
       </div>
