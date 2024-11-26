@@ -1,4 +1,4 @@
-import Image from "next/webp";
+import Image from "next/image";
 import {
   FaDiscord,
   FaTiktok,

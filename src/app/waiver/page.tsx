@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 import FormHeader from "@/components/home/FormHeader";
 import FormButton from "@/components/FormButton";
 import logo from "@/public/logo.webp";
-import Image from "next/webp";
+import Image from "next/image";
 
 const Page = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
