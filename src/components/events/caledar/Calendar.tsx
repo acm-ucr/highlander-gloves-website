@@ -7,7 +7,7 @@ const year = date.getFullYear();
 
 const Calendar = () => {
   return (
-    <div className="flex h-full w-screen flex-col items-center justify-center">
+    <div className="flex h-full w-full flex-col items-center justify-center">
       <div className="absolute right-[7.75%] top-[44%] z-0">
         <Image alt="background" src={page} className="object-contain" />
       </div>

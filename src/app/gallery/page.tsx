@@ -102,7 +102,7 @@ const GalleryComponent = () => {
         <p className="py-1 font-archivo-black">2023 - 2024</p>
         <div className="flex w-36 flex-col border-t-[2px] border-white pb-3" />
       </div>
-      <Gallery images={images} />
+      <Gallery enableImageSelection={false} images={images} />
     </div>
   );
 };
