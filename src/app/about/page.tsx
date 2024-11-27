@@ -5,7 +5,7 @@ import aboutUs from "@/public/title/aboutUs.webp";
 
 const page = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-10">
+    <div className="flex w-full flex-col items-center justify-center gap-4 md:gap-10">
       <Title webp={aboutUs} alt="About Us Header Image" txt="ABOUT US" />
       <AboutUs />
       <FAQs />
