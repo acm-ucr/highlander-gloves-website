@@ -1,7 +1,8 @@
 "use client";
 import { Gallery } from "react-grid-gallery";
-import React from "react";
 
+import Title from "@/components/Title";
+import gallery from "@/public/title/gallery.webp";
 import image1 from "@/public/gallery/image1.webp";
 import image2 from "@/public/gallery/image2.webp";
 import image3 from "@/public/gallery/image3.webp";
@@ -95,16 +96,19 @@ const images: ImageProps[] = importedImages.map((image, index) => ({
   alt: `Image ${index + 1}`,
 }));
 
-const GalleryComponent = () => {
+const page = () => {
   return (
-    <div className="w-full">
-      <div className="flex flex-col items-center justify-center">
-        <p className="py-1 font-archivo-black">2023 - 2024</p>
-        <div className="flex w-36 flex-col border-t-[2px] border-white pb-3" />
+    <div className="w-full space-y-10">
+      <Title webp={gallery} txt="GALLERY" alt="Gallery Banner" />
+      <div className="w-full">
+        <div className="flex flex-col items-center justify-center">
+          <p className="py-1 font-archivo-black text-xl">2023 - 2024</p>
+          <div className="flex w-36 flex-col border-t-[2px] border-white pb-3" />
+        </div>
+        <Gallery enableImageSelection={false} images={images} />
       </div>
-      <Gallery enableImageSelection={false} images={images} />
     </div>
   );
 };
 
-export default GalleryComponent;
+export default page;
