@@ -7,7 +7,11 @@ import Title from "@/components/Title";
 const page = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center">
-      <Title webp={meetTheBoard} alt="Meet the Board Header Image" txt="MEET THE BOARD"/>
+      <Title
+        webp={meetTheBoard}
+        alt="Meet the Board Header Image"
+        txt="MEET THE BOARD"
+      />
       <Boards />
 
       <Image
@@ -20,5 +24,3 @@ const page = () => {
 };
 
 export default page;
-
-
