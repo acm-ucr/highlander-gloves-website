@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaDiscord,
   FaTiktok,
@@ -24,41 +25,41 @@ const Socials = () => {
         className="w-full md:hidden"
       />
 
-      <a
+      <Link
         href="https://discord.com/invite/NV5dX8ezYw"
         target="_blank"
         className="absolute left-[13.5%] top-[52%] duration-200 hover:scale-[110%] hover:cursor-pointer xl:left-[13.5%] xl:top-[45%] xl:text-8xl 2xl:left-[14%] 2xl:top-[46%] 2xl:text-9xl"
       >
         <FaDiscord />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://www.tiktok.com/@HighlanderGloves"
         target="_blank"
         className="absolute bottom-[7%] left-[32.5%] duration-200 hover:scale-[110%] hover:cursor-pointer xl:bottom-[7%] xl:left-[31.5%] xl:text-8xl 2xl:bottom-[7%] 2xl:left-[32%] 2xl:text-9xl"
       >
         <FaTiktok />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://www.instagram.com/highlandergloves/?hl=en"
         target="_blank"
         className="absolute left-[51.5%] top-[53%] duration-200 hover:scale-[110%] hover:cursor-pointer xl:left-[48.5%] xl:top-[45%] xl:text-8xl 2xl:left-[49%] 2xl:top-[46%] 2xl:text-9xl"
       >
         <FaInstagram />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://www.youtube.com/channel/UC8v90kTZeMn7tieSbISs-SQ/feed?view_as=public"
         target="_blank"
         className="absolute bottom-[6.5%] right-[21%] duration-200 hover:scale-[110%] hover:cursor-pointer xl:bottom-[7%] xl:right-[27%] xl:text-8xl 2xl:bottom-[7%] 2xl:right-[27.5%] 2xl:text-9xl"
       >
         <FaYoutube />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://www.facebook.com/groups/HighlanderGloves/"
         target="_blank"
         className="absolute right-[4%] top-[53%] duration-200 hover:scale-[110%] hover:cursor-pointer xl:right-[12.5%] xl:top-[45%] xl:text-8xl 2xl:right-[13%] 2xl:top-[46%] 2xl:text-9xl"
       >
         <FaFacebookF />
-      </a>
+      </Link>
     </div>
   );
 };
