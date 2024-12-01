@@ -92,7 +92,7 @@ function CalendarEvents({
     date: Date;
     selected: boolean;
     onClick: (date: Date) => void;
-  }> = ({ date, selected, onClick }) => {
+  }> = ({ date, onClick }) => {
     const today = new Date();
     const isToday =
       date.getDate() === today.getDate() &&

@@ -69,7 +69,7 @@ const EventsRender = () => {
   return (
     <div className="flex w-full flex-col font-anek-telegu text-3xl">
       <div className="mt-8">
-        {events.map((event: any, index: number) => (
+        {events.map((event, index: number) => (
           <Event key={index} {...event} />
         ))}
       </div>

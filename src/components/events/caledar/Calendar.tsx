@@ -3,7 +3,6 @@ import { CalendarEvents, EventProps } from "@/components/ui/calendar";
 import Image from "next/image";
 import page from "@/public/events/calendarbackground.webp";
 import { useState } from "react";
-import { eventInfoCalendar } from "@/data/eventInfoCalendar";
 
 const date = new Date();
 const year = date.getFullYear();
