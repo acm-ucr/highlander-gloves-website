@@ -14,7 +14,7 @@ interface GoogleCalendarEvents {
   summary: string;
   location?: string;
 }
-        
+
 const page = () => {
   const [events, setEvents] = useState<EventProps[]>([]);
 
