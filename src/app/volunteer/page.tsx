@@ -20,7 +20,7 @@ const page = () => {
   if (isSubmitted) {
     return (
       <div className="flex min-h-screen w-full flex-col items-center justify-center gap-5 font-archivo-black text-4xl">
-        <Image src={logo} alt="Logo" className="w-[14%]" />
+        <Image src={logo} alt="Logo" className="w-[20%] md:w-[14%]" />
         Volunteer Form Submitted!
       </div>
     );
@@ -39,13 +39,13 @@ const page = () => {
           }
         }}
       ></iframe>
-      <div className="flex min-h-screen w-full flex-col items-center justify-center gap-2 p-4 font-archivo-narrow text-white">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-2 p-4 font-archivo-narrow text-white">
         <FormHeader txt="VOLUNTEER" />
-        <div className="flex w-[45%] flex-col">
-          <div className="mt-5 w-2/4 text-3xl font-bold">
+        <div className="flex w-[80%] flex-col md:w-[45%]">
+          <div className="text-lg font-bold md:mt-5 md:text-3xl">
             What do we do while volunteering?
           </div>
-          <div className="mb-3 text-xl">
+          <div className="mb-3 text-sm md:text-xl">
             Highlander Gloves is partnered with Riverside PD to help tutor
             at-risk kids around the area, while also coaching them in boxing. As
             a volunteer, you'll usually be helping clean the facility, tutoring
@@ -53,16 +53,16 @@ const page = () => {
             experience, we'll show you the ropes, so please feel free to show
             up! We'd love all the help we can get!
           </div>
-          <div className="w-2/4 text-3xl font-bold">
+          <div className="text-lg font-bold md:text-3xl">
             What if I don't have a ride?
           </div>
-          <div className="mb-3 text-xl">
+          <div className="mb-3 text-sm md:text-xl">
             No worries! We can help arrange a ride for you whenever possible.
             Just ask a staff member on discord for help, and we'll get you
             situated.
           </div>
-          <div className="w-2/4 text-3xl font-bold">Times:</div>
-          <div className="mb-3 w-2/4 text-xl">
+          <div className="text-lg font-bold md:text-3xl">Times:</div>
+          <div className="mb-3 text-sm md:text-xl">
             Tuesdays: 4:00 pm - 6:00 pm <br />
             Wednesdays: 4:00 pm - 6:00 pm
             <br />
@@ -70,18 +70,18 @@ const page = () => {
             (P.S. Thursdays will consist of only boxing, so more experienced
             members, this is your time to shine!)
           </div>
-          <div className="w-2/4 text-3xl font-bold">
+          <div className="text-lg font-bold md:text-3xl">
             Why should I volunteer?
           </div>
-          <div className="mb-3 text-xl">
+          <div className="mb-3 text-sm md:text-xl">
             In order to become a fully fledged member of Highlander Gloves, you
             will need to volunteer at least twice. Furthermore, volunteering
             with us at RBA is a great thing to include on your resume, an
             amazing way to give back to the community, and most importantly, is
             a whole lot of fun!
           </div>
-          <div className="w-2/4 text-3xl font-bold">Requirements:</div>
-          <div className="mb-4 text-xl">
+          <div className="text-lg font-bold md:text-3xl">Requirements:</div>
+          <div className="mb-4 text-sm md:text-xl">
             In order to volunteer, RBA mandates that you complete the following
             SA course, as well as fill out the following Volunteer Application
             Form. Please fill out the form once you've earned your certificate
@@ -89,15 +89,16 @@ const page = () => {
             well as a digital scan of the filled out application to the
             following google form:
           </div>
-          <div className="text-xl">
-            SA Course:
+          <div className="text-sm md:w-full md:text-xl">
+            SA Course: <br />
             <Link
               href="https://sexual-harassment-prevention-training.calcivilrights.ca.gov/NonSupervisoryEnglish/story.html"
-              className="text-blue-400 hover:text-blue-500"
+              className="w-3/4 text-blue-400 hover:text-blue-500 md:w-full"
               target="_blank"
             >
               {" "}
-              https://sexual-harassment-prevention-training.calcivilrights.ca.gov/NonSupervisoryEnglish/story.html
+              https://sexual-harassment-prevention-training.calcivilrights.ca.gov/
+              NonSupervisoryEnglish/story.html
             </Link>
             <br />
             Volunteer Application Form:
@@ -127,10 +128,10 @@ const page = () => {
           // action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc6X4dAsdD5VIfyuKESr48vOYZSY3Rt224rGZw03WS2IP8RDg/formResponse" testing
           onSubmit={() => (window.submitted = true)}
           target="hidden_iframe"
-          className="mt-5 w-[45%] space-y-4"
+          className="mt-5 w-[80%] space-y-4 md:w-[45%]"
         >
           {/* Name Field */}
-          <div>
+          <div className="w-full">
             <label className="mb-1 block font-archivo-black text-lg font-bold uppercase md:text-2xl lg:text-3xl">
               Name (First, Last)*
             </label>
