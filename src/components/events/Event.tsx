@@ -17,7 +17,7 @@ const Event = ({ name, description, location, time, side }: EventProps) => {
           : "ml-auto items-end text-right"
       } w-11/12 md:max-w-[50%]`}
     >
-      <div className="w-1/2 flex-row justify-center text-xs md:w-full md:text-3xl">
+      <div className="w-3/4 flex-row justify-center text-xs md:w-full md:text-3xl">
         <Header position={side} title={name} />
       </div>
 

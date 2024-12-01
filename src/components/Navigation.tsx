@@ -22,7 +22,7 @@ const Navigation = () => {
 
   return (
     <div className="top-0 z-50 h-[10vh] font-archivo-narrow text-2xl font-bold">
-      <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%] py-[0.8%]">
+      <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%]">
         <Link
           href="/"
           onClick={() => {

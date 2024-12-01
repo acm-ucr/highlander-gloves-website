@@ -1,5 +1,7 @@
 "use client";
 import Calendar from "@/components/events/caledar/Calendar";
+import Title from "@/components/Title";
+import upcomingEvents from "@/public/title/upcomingEvents.webp";
 import EventsRender from "@/components/events/EventsRender";
 import { EventProps } from "@/components/ui/calendar";
 import { useEffect, useState } from "react";
@@ -12,7 +14,7 @@ interface GoogleCalendarEvents {
   summary: string;
   location?: string;
 }
-
+        
 const page = () => {
   const [events, setEvents] = useState<EventProps[]>([]);
 
@@ -64,6 +66,11 @@ const page = () => {
 
   return (
     <div className="flex w-full flex-col gap-10">
+      <Title
+        webp={upcomingEvents}
+        txt="UPCOMING EVENTS"
+        alt="Upcoming Events Banner"
+      />
       <EventsRender />
       <Calendar events={events} />
     </div>

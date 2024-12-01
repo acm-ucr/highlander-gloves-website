@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+[data-testid="grid-gallery-item_thumbnail"] {
+  cursor: default !important;
+}
 @layer base {
   :root {
     --radius: 0.5rem;
