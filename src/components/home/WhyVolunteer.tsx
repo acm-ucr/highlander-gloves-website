@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 
 const WhyVolunteer = () => {
   return (
-    <div className="flex w-full flex-col items-start justify-start md:items-center">
+    <div className="flex w-5/6 flex-col items-start justify-start md:w-full md:items-center">
       <div className="flex w-full justify-center md:hidden">
         <Header position="middle" title="WHY SHOULD I VOLUNTEER?" />
       </div>

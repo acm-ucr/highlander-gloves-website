@@ -6,7 +6,7 @@ import { links } from "@/data/Footer";
 
 const NotFound = () => {
   return (
-    <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-hlg-dark-gray via-hlg-dark-gray to-hlg-red-200 lg:h-[820px]">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-hlg-dark-gray via-hlg-dark-gray to-hlg-red-200 lg:h-[820px]">
       <Image
         src={Logo}
         alt="Highlander Gloves Logo"

@@ -285,11 +285,12 @@ const page = () => {
       </div>
 
       {/* footer */}
-      <div className="flex flex-row justify-center gap-2 pb-4 text-[6px] md:pb-10 md:text-base">
+      <div className="flex flex-col items-center justify-center gap-2 pb-4 text-center text-[10px] md:flex-row md:pb-10 md:text-base">
         <p className="font-bold">The Highlander News Article:</p>
         <Link
           href="https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/"
-          className="underline"
+          className="w-5/6 underline md:w-fit"
+          target="_blank"
         >
           https://www.highlandernews.org/89758/knocking-out-the-competition-one-punch-at-a-time/
         </Link>
