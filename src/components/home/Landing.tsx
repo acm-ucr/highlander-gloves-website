@@ -4,6 +4,7 @@ import banner from "@/public/home/landing.webp";
 const Landing = () => {
   return (
     <div className="relative flex flex-row items-center justify-center text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
+      <Image className="w-screen brightness-75" src={banner} alt="Landing" />
       <div className="absolute inset-0 flex flex-col items-center font-archivo-black">
         <p className="xl:top[20%] relative right-[35%] top-[8%] animate-fade-right md:top-[15%] lg:top-[17%]">
           UCR
@@ -15,7 +16,6 @@ const Landing = () => {
           GLOVES
         </p>
       </div>
-      <Image className="w-screen" src={banner} alt="Landing" />
     </div>
   );
 };
