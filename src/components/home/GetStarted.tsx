@@ -79,7 +79,11 @@ const GetStarted = () => {
                   whileInView="show"
                   viewport={{ once: true }}
                 >
-                  <Button txt="WAIVER" link="/waiver" />
+                  <Button
+                    txt="WAIVER"
+                    target="_blank"
+                    link="https://docs.google.com/forms/d/17u7VsvHM_5CnkcAk2GUraK5w-sISIgW68Ymd2HAU7Xo/viewform?edit_requested=true"
+                  />
                 </motion.div>
               </div>
             </div>
