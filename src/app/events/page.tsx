@@ -2,7 +2,7 @@
 import Calendar from "@/components/events/caledar/Calendar";
 import Title from "@/components/Title";
 import upcomingEvents from "@/public/title/upcomingEvents.webp";
-import EventsRender from "@/components/events/EventsRender";
+import Events from "@/components/events/Events";
 import { EventProps } from "@/components/ui/calendar";
 import { useEffect, useState } from "react";
 
@@ -71,7 +71,7 @@ const page = () => {
         txt="UPCOMING EVENTS"
         alt="Upcoming Events Banner"
       />
-      <EventsRender />
+      <Events />
       <Calendar events={events} />
     </div>
   );
