@@ -1,7 +1,7 @@
 import { FaTimes } from "react-icons/fa";
 
 type ModalProps = {
-  answer: string | string[];
+  answer: React.ReactNode; // pdated type to accept JSX
   onClose: () => void;
 };
 
