@@ -13,6 +13,7 @@ interface GoogleCalendarEvents {
   };
   summary: string;
   location?: string;
+  description?: string;
 }
 
 const page = () => {
@@ -52,6 +53,7 @@ const page = () => {
             title: event.summary || "No Title",
             startTime: event.start.dateTime || event.start.date || "",
             location: event.location || "N/A",
+            description: event.description || "N/A",
           }),
         );
 
