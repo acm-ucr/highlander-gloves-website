@@ -237,10 +237,7 @@ function CalendarEvents({
                 <strong>Date:</strong>{" "}
                 {new Date(popupEvent.startTime).toLocaleDateString()}
               </div>
-              <div>
-                <strong>Description:</strong>{" "}
-                {popupEvent.description || "No description available"}
-              </div>
+              <div>{popupEvent.description || "No description available"}</div>
             </>
           }
           onClose={toggleModal}
