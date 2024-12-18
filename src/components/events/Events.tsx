@@ -57,12 +57,8 @@ const fetchEvents = async (): Promise<EventProps[]> => {
 };
 
 const Events = () => {
-  const event1Ref = useRef(null);
-  const isEvent1InView = useInView(event1Ref, { once: true });
-  const event2Ref = useRef(null);
-  const isEvent2InView = useInView(event1Ref, { once: true });
-  const event3Ref = useRef(null);
-  const isEvent3InView = useInView(event1Ref, { once: true });
+  const containerRef = useRef(null);
+  const isContainerInView = useInView(containerRef, { once: true });
 
   const {
     data: events = [],
@@ -86,42 +82,23 @@ const Events = () => {
       </p>
     );
   return (
-    <div className="flex w-full flex-col font-anek-telegu text-3xl">
-      <div className="mt-8" ref={event1Ref}>
+    <div
+      className="flex w-full flex-col font-anek-telegu text-3xl"
+      ref={containerRef}
+    >
+      {events.map((event, index) => (
         <motion.div
+          key={index}
+          className="mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={
-            isEvent1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+            isContainerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
           }
-          transition={{ duration: 1 }}
+          transition={{ duration: 1 + index * 0.3 }}
         >
-          {events && events[0] && <Event {...events[0]} />}
+          <Event {...event} />
         </motion.div>
-      </div>
-
-      <div className="mt-8" ref={event2Ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={
-            isEvent2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-          }
-          transition={{ duration: 2 }}
-        >
-          {events && events[1] && <Event {...events[1]} />}
-        </motion.div>
-      </div>
-
-      <div className="mt-8" ref={event3Ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={
-            isEvent3InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-          }
-          transition={{ duration: 2.3 }}
-        >
-          {events && events[2] && <Event {...events[2]} />}
-        </motion.div>
-      </div>
+      ))}
     </div>
   );
 };

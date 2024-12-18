@@ -4,7 +4,9 @@ import Title from "@/components/Title";
 import upcomingEvents from "@/public/title/upcomingEvents.webp";
 import Events from "@/components/events/Events";
 import { EventProps } from "@/components/ui/calendar";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { motion } from "motion/react";
+import { useInView } from "framer-motion";
 
 interface GoogleCalendarEvents {
   start: {
@@ -17,6 +19,9 @@ interface GoogleCalendarEvents {
 }
 
 const page = () => {
+  const containerRef = useRef(null);
+  const isContainerInView = useInView(containerRef, { once: true });
+
   const [events, setEvents] = useState<EventProps[]>([]);
 
   useEffect(() => {
@@ -74,7 +79,18 @@ const page = () => {
         alt="Upcoming Events Banner"
       />
       <Events />
-      <Calendar events={events} />
+      <div ref={containerRef}>
+        <motion.div
+          className="mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={
+            isContainerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
+          transition={{ duration: 1}}
+        >
+          <Calendar events={events} />
+        </motion.div>
+      </div>
     </div>
   );
 };
