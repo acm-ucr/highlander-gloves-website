@@ -81,7 +81,6 @@ const page = () => {
       <Events />
       <div ref={containerRef}>
         <motion.div
-          className="mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={
             isContainerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
