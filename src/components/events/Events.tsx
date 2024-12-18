@@ -1,6 +1,9 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import Event from "@/components/events/Event";
+import { motion } from "motion/react";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 type EventProps = {
   name: string;
@@ -54,6 +57,13 @@ const fetchEvents = async (): Promise<EventProps[]> => {
 };
 
 const Events = () => {
+  const event1Ref = useRef(null);
+  const isEvent1InView = useInView(event1Ref, { once: true });
+  const event2Ref = useRef(null);
+  const isEvent2InView = useInView(event1Ref, { once: true });
+  const event3Ref = useRef(null);
+  const isEvent3InView = useInView(event1Ref, { once: true });
+
   const {
     data: events = [],
     error,
@@ -75,13 +85,42 @@ const Events = () => {
         Error fetching events
       </p>
     );
-
   return (
     <div className="flex w-full flex-col font-anek-telegu text-3xl">
-      <div className="mt-8">
-        {events.map((event, index) => (
-          <Event key={index} {...event} />
-        ))}
+      <div className="mt-8" ref={event1Ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={
+            isEvent1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
+          transition={{ duration: 1 }}
+        >
+          {events && events[0] && <Event {...events[0]} />}
+        </motion.div>
+      </div>
+
+      <div className="mt-8" ref={event2Ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={
+            isEvent2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
+          transition={{ duration: 2 }}
+        >
+          {events && events[1] && <Event {...events[1]} />}
+        </motion.div>
+      </div>
+
+      <div className="mt-8" ref={event3Ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={
+            isEvent3InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
+          transition={{ duration: 2.3 }}
+        >
+          {events && events[2] && <Event {...events[2]} />}
+        </motion.div>
       </div>
     </div>
   );
