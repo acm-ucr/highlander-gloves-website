@@ -86,7 +86,7 @@ const page = () => {
           animate={
             isContainerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
           }
-          transition={{ duration: 1}}
+          transition={{ duration: 1 }}
         >
           <Calendar events={events} />
         </motion.div>
