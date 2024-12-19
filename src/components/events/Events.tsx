@@ -1,6 +1,8 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import Event from "@/components/events/Event";
+import { useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 type EventProps = {
   name: string;
@@ -54,6 +56,10 @@ const fetchEvents = async (): Promise<EventProps[]> => {
 };
 
 const Events = () => {
+  const containerRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const isContainerInView = useInView(containerRef, { once: true });
+
   const {
     data: events = [],
     error,
@@ -62,6 +68,13 @@ const Events = () => {
     queryKey: ["events"],
     queryFn: fetchEvents,
   });
+
+  // when page is loaded, hasAnimated becomes true, which trigger animation
+  useEffect(() => {
+    if (!hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, []);
 
   if (isLoading)
     return (
@@ -77,12 +90,18 @@ const Events = () => {
     );
 
   return (
-    <div className="flex w-full flex-col font-anek-telegu text-3xl">
-      <div className="mt-8">
-        {events.map((event, index) => (
-          <Event key={index} {...event} />
-        ))}
-      </div>
+    <div
+      className="flex w-full flex-col font-anek-telegu text-3xl"
+      ref={containerRef}
+    >
+      {events.map((event, index) => (
+        <Event
+          key={index}
+          {...event}
+          isContainerInView={isContainerInView || hasAnimated} // will animate for either case
+          animationIndex={index}
+        />
+      ))}
     </div>
   );
 };
