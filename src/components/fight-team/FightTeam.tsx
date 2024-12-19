@@ -23,7 +23,7 @@ const FightTeam = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}
-          className="w-[95%] border-l-4 md:w-1/3 md:border-l-0"
+          className="w-[90%] border-l-4 md:w-1/3 md:border-l-0"
         >
           <Header position="left" title="WHAT IS FIGHT TEAM?" />
         </motion.div>
@@ -37,7 +37,7 @@ const FightTeam = () => {
             transition={{ duration: 0.8 }}
             animate={{ x: 0 }}
           >
-            <Photo width={"w-1/3"} webp={coach} alt="Coach Israel Salgado" />
+            <Photo width={"w-1/2"} webp={coach} alt="Coach Israel Salgado" />
           </motion.div>
 
           <motion.div
@@ -51,8 +51,8 @@ const FightTeam = () => {
             <Photo width={"w-2/3"} webp={coach} alt="Coach Israel Salgado" />
           </motion.div>
 
-          <div className="flex flex-col items-center justify-center md:w-3/5">
-            <div className="w-4/6">
+          <div className="mt-3 flex flex-col items-center justify-center md:w-3/5 lg:mt-0">
+            <div className="w-5/6">
               <motion.div
                 transition={{ duration: 0.5 }}
                 initial={{ x: -50 }}
@@ -60,7 +60,7 @@ const FightTeam = () => {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <div className="font-anek-tekygu mt-2 flex flex-col text-xs md:text-lg md:font-thin">
+                <div className="font-anek-tekygu mt-2 flex flex-col text-sm md:text-lg md:font-thin">
                   Fight team is UCR's competitive boxing team that is a branch
                   of highlander Gloves They have their own training and program
                   seperate from the general members of Highlander Gloves. Fight
@@ -71,7 +71,7 @@ const FightTeam = () => {
                   our staff during practice. This team is led by Coach Israel
                   and our Womens' and Mens' Captains.
                 </div>
-                <div className="mt-5 flex w-full flex-col justify-items-center justify-self-center font-archivo-narrow text-xs font-medium md:mt-8 md:justify-self-start md:text-lg">
+                <div className="mt-5 flex w-full flex-col justify-items-center justify-self-center font-archivo-narrow text-sm font-medium md:mt-8 md:justify-self-start md:text-lg">
                   #2 Men's Team and #3 Women's Team USIBA '24
                 </div>
                 <div className="flex w-2/3 flex-col justify-self-center font-archivo-narrow text-xs font-medium md:justify-self-start md:text-lg">
