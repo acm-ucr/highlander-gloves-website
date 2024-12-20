@@ -5,7 +5,6 @@ import upcomingEvents from "@/public/title/upcomingEvents.webp";
 import EventsRender from "@/components/events/EventsRender";
 import { EventProps } from "@/components/ui/calendar";
 import { useEffect, useState } from "react";
-import { eventInfoCalendar } from "@/data/eventInfoCalendar";
 
 interface GoogleCalendarEvents {
   start: {
