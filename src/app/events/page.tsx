@@ -74,7 +74,7 @@ const page = () => {
       />
 
       <EventsRender />
-      <Calendar events={eventInfoCalendar} />
+      <Calendar events={events} />
     </div>
   );
 };
