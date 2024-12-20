@@ -2,9 +2,11 @@
 import Calendar from "@/components/events/caledar/Calendar";
 import Title from "@/components/Title";
 import upcomingEvents from "@/public/title/upcomingEvents.webp";
-import EventsRender from "@/components/events/EventsRender";
+import Events from "@/components/events/Events";
 import { EventProps } from "@/components/ui/calendar";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { motion } from "motion/react";
+import { useInView } from "framer-motion";
 
 interface GoogleCalendarEvents {
   start: {
@@ -13,9 +15,13 @@ interface GoogleCalendarEvents {
   };
   summary: string;
   location?: string;
+  description?: string;
 }
 
 const page = () => {
+  const containerRef = useRef(null);
+  const isContainerInView = useInView(containerRef, { once: true });
+
   const [events, setEvents] = useState<EventProps[]>([]);
 
   useEffect(() => {
@@ -52,6 +58,7 @@ const page = () => {
             title: event.summary || "No Title",
             startTime: event.start.dateTime || event.start.date || "",
             location: event.location || "N/A",
+            description: event.description || "N/A",
           }),
         );
 
@@ -71,9 +78,18 @@ const page = () => {
         txt="UPCOMING EVENTS"
         alt="Upcoming Events Banner"
       />
-
-      <EventsRender />
-      <Calendar events={events} />
+      <Events />
+      <div ref={containerRef}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={
+            isContainerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+          }
+          transition={{ duration: 1 }}
+        >
+          <Calendar events={events} />
+        </motion.div>
+      </div>
     </div>
   );
 };

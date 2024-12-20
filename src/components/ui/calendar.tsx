@@ -14,6 +14,7 @@ export interface EventProps {
   title: string;
   startTime: string;
   location: string;
+  description?: string;
 }
 
 function getLastDayOfMonth(date: Date) {
@@ -251,12 +252,28 @@ function CalendarEvents({
       />
       {popupEvent && (
         <Modal
-          answer={`${popupEvent.title}
-          Location: ${popupEvent.location}
-          Time: ${new Date(popupEvent.startTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`}
-          // answer={`${popupEvent.title},Location: ${popupEvent.location}\nTime: ${new Date(
-          //   popupEvent.startTime,
-          // ).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`}
+          answer={
+            <>
+              <div>
+                <strong>{popupEvent.title}</strong>
+              </div>
+              <div>
+                <strong>Location:</strong> {popupEvent.location}
+              </div>
+              <div>
+                <strong>Time:</strong>{" "}
+                {new Date(popupEvent.startTime).toLocaleTimeString([], {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
+              </div>
+              <div>
+                <strong>Date:</strong>{" "}
+                {new Date(popupEvent.startTime).toLocaleDateString()}
+              </div>
+              <div>{popupEvent.description || "No description available"}</div>
+            </>
+          }
           onClose={toggleModal}
         />
       )}
