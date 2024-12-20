@@ -17,7 +17,6 @@ const Calendar = ({ events }: { events: EventProps[] }) => {
           <p key={index}>C</p>
         ))}
       </div>
-
       <CalendarEvents
         mode="single"
         selected={date}

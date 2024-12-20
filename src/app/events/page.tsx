@@ -72,6 +72,7 @@ const page = () => {
         txt="UPCOMING EVENTS"
         alt="Upcoming Events Banner"
       />
+
       <EventsRender />
       <Calendar events={eventInfoCalendar} />
     </div>

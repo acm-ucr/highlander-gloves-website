@@ -74,11 +74,10 @@ function CalendarEvents({
   const [currMonth, setCurrentMonth] = useState(currentDate.getMonth());
   const [currYear, setCurrentYear] = useState(currentDate.getFullYear());
 
-
   const nextDate = () => {
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() + 1);
-    
+
     setCurrentDate(newDate);
     setCurrentMonth(newDate.getMonth());
     setCurrentYear(newDate.getFullYear());
@@ -88,7 +87,7 @@ function CalendarEvents({
   const prevDate = () => {
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() - 1);
-    
+
     setCurrentDate(newDate);
     setCurrentMonth(newDate.getMonth());
     setCurrentYear(newDate.getFullYear());
@@ -98,7 +97,7 @@ function CalendarEvents({
   const toggleModal = () => {
     setPopupEvent(null);
   };
-  
+
   const modifiers = {
     hasEvent: (date: {
       getFullYear: () => number;
@@ -131,7 +130,7 @@ function CalendarEvents({
         event.date.getDate() === date.getDate(),
     );
 
-  return (
+    return (
       <div className="text-overflow-clip relative h-[9vw] w-[8.75vw]">
         <div
           onClick={() => onClick(date)}
@@ -154,17 +153,11 @@ function CalendarEvents({
 
         {dayEvents.length > 0 && (
           <div
-            className={
-            `invis-scrollbar
-            ${
+            className={`no-scrollbar ${
               isToday
                 ? "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-white md:top-[38%]"
                 : "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-hlg-red-200 md:top-[38%]"
-            }
-            ${
-              dayEvents.length > 1 ? "overflow-y-scroll" 
-              : "" 
-            }`}
+            } ${dayEvents.length > 1 ? "overflow-y-scroll" : ""}`}
           >
             {dayEvents.map((event, index) => (
               <div
@@ -191,11 +184,9 @@ function CalendarEvents({
     );
   };
 
-
-
   return (
     <div>
-      <div className="text-md absolute top-[5%] right-[44.25%] md:right-[46%] z-30 font-archivo-black md:text-4xl">
+      <div className="text-md absolute right-[44.25%] top-[5%] z-30 font-archivo-black md:right-[46%] md:text-4xl">
         {currYear}
       </div>
       <DayPicker
@@ -237,14 +228,16 @@ function CalendarEvents({
         }}
         components={{
           IconLeft: () => (
-            <IoMdPlay 
-            onClick={prevDate}
-            className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
+            <IoMdPlay
+              onClick={prevDate}
+              className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2"
+            />
           ),
           IconRight: () => (
-            <IoMdPlay 
-            onClick={nextDate}
-            className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
+            <IoMdPlay
+              onClick={nextDate}
+              className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2"
+            />
           ),
           Day: (props) => (
             <CustomDay
