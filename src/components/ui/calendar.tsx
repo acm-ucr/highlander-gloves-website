@@ -66,14 +66,39 @@ function CalendarEvents({
   const [selectedDate, setSelectedDate] = React.useState<Date | undefined>(
     undefined,
   );
+
+  const eventDays = events.map((event) => event.date);
   const [popupEvent, setPopupEvent] = useState<EventProps | null>(null);
+
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currMonth, setCurrentMonth] = useState(currentDate.getMonth());
+  const [currYear, setCurrentYear] = useState(currentDate.getFullYear());
+
+
+  const nextDate = () => {
+    const newDate = new Date(currentDate);
+    newDate.setMonth(newDate.getMonth() + 1);
+    
+    setCurrentDate(newDate);
+    setCurrentMonth(newDate.getMonth());
+    setCurrentYear(newDate.getFullYear());
+    console.log(currentDate, currMonth, currYear);
+  };
+
+  const prevDate = () => {
+    const newDate = new Date(currentDate);
+    newDate.setMonth(newDate.getMonth() - 1);
+    
+    setCurrentDate(newDate);
+    setCurrentMonth(newDate.getMonth());
+    setCurrentYear(newDate.getFullYear());
+    console.log(currentDate, currMonth, currYear);
+  };
 
   const toggleModal = () => {
     setPopupEvent(null);
   };
-
-  const eventDays = events.map((event) => event.date);
-
+  
   const modifiers = {
     hasEvent: (date: {
       getFullYear: () => number;
@@ -106,7 +131,7 @@ function CalendarEvents({
         event.date.getDate() === date.getDate(),
     );
 
-    return (
+  return (
       <div className="text-overflow-clip relative h-[9vw] w-[8.75vw]">
         <div
           onClick={() => onClick(date)}
@@ -160,9 +185,15 @@ function CalendarEvents({
     );
   };
 
+
+
   return (
     <div>
+      <div className="text-md absolute top-[5%] right-[44.25%] md:right-[46%] z-30 font-archivo-black md:text-4xl">
+        {currYear}
+      </div>
       <DayPicker
+        month={currentDate}
         showOutsideDays={showOutsideDays}
         formatters={{
           formatWeekdayName: captionWeek,
@@ -191,7 +222,7 @@ function CalendarEvents({
           row: "flex w-full mt-0",
           cell: "relative text-center p-0 border border-hlg-red-300",
           day_today: "bg-hlg-red-200 text-white",
-          day_outside: "day-outside text-bg-hlg-red-200 opacity-[57%]",
+          day_outside: "text-white",
           day_disabled: "text-neutral-500 opacity-50",
           day_range_middle:
             "aria-selected:bg-neutral-100 aria-selected:text-neutral-900",
@@ -200,10 +231,14 @@ function CalendarEvents({
         }}
         components={{
           IconLeft: () => (
-            <IoMdPlay className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
+            <IoMdPlay 
+            onClick={prevDate}
+            className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
           ),
           IconRight: () => (
-            <IoMdPlay className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
+            <IoMdPlay 
+            onClick={nextDate}
+            className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
           ),
           Day: (props) => (
             <CustomDay
@@ -217,9 +252,12 @@ function CalendarEvents({
       />
       {popupEvent && (
         <Modal
-          answer={`${popupEvent.title}\nLocation: ${popupEvent.location}\nTime: ${new Date(
-            popupEvent.startTime,
-          ).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`}
+          answer={`${popupEvent.title}
+          Location: ${popupEvent.location}
+          Time: ${new Date(popupEvent.startTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`}
+          // answer={`${popupEvent.title},Location: ${popupEvent.location}\nTime: ${new Date(
+          //   popupEvent.startTime,
+          // ).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`}
           onClose={toggleModal}
         />
       )}
