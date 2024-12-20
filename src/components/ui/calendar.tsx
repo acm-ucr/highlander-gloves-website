@@ -154,10 +154,16 @@ function CalendarEvents({
 
         {dayEvents.length > 0 && (
           <div
-            className={`${
+            className={
+            `invis-scrollbar
+            ${
               isToday
                 ? "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-white md:top-[38%]"
                 : "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-hlg-red-200 md:top-[38%]"
+            }
+            ${
+              dayEvents.length > 1 ? "overflow-y-scroll" 
+              : "" 
             }`}
           >
             {dayEvents.map((event, index) => (
