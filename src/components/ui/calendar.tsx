@@ -166,8 +166,8 @@ function CalendarEvents({
                 onClick={() => setPopupEvent(event)}
                 className={`${
                   isToday
-                    ? "cursor-pointer text-[4px] text-hlg-red-200 md:text-xs"
-                    : "cursor-pointer text-[4px] text-white md:text-xs"
+                    ? "cursor-pointer border-b-2 text-[4px] text-hlg-red-200 md:text-xs"
+                    : "cursor-pointer border-b-2 text-[4px] text-white md:text-xs"
                 }`}
               >
                 <div className="p-[3%] pt-[12.5%]">
@@ -231,7 +231,7 @@ function CalendarEvents({
           IconLeft: () => (
             <IoMdPlay
               onClick={prevDate}
-              className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2"
+              className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-4"
             />
           ),
           IconRight: () => (

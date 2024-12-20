@@ -8,7 +8,7 @@
   :root {
     --radius: 0.5rem;
   }
-  .no-scrollbar::-webkit-scrollbar {
+  /* .no-scrollbar::-webkit-scrollbar {
     width: 0px;
-  }
+  } */
 }
