@@ -72,7 +72,6 @@ function CalendarEvents({
   const [popupEvent, setPopupEvent] = useState<EventProps | null>(null);
 
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [currMonth, setCurrentMonth] = useState(currentDate.getMonth());
   const [currYear, setCurrentYear] = useState(currentDate.getFullYear());
 
   const nextDate = () => {
@@ -80,7 +79,6 @@ function CalendarEvents({
     newDate.setMonth(newDate.getMonth() + 1);
 
     setCurrentDate(newDate);
-    setCurrentMonth(newDate.getMonth());
     setCurrentYear(newDate.getFullYear());
   };
 
@@ -89,7 +87,6 @@ function CalendarEvents({
     newDate.setMonth(newDate.getMonth() - 1);
 
     setCurrentDate(newDate);
-    setCurrentMonth(newDate.getMonth());
     setCurrentYear(newDate.getFullYear());
   };
 
