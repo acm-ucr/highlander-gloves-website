@@ -154,7 +154,7 @@ function CalendarEvents({
 
         {dayEvents.length > 0 && (
           <div
-            className={`no-scrollbar ${
+            className={`small-scrollbar ${
               isToday
                 ? "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-white md:top-[38%]"
                 : "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-hlg-red-200 md:top-[38%]"
@@ -166,9 +166,9 @@ function CalendarEvents({
                 onClick={() => setPopupEvent(event)}
                 className={`${
                   isToday
-                    ? "cursor-pointer border-b-2 text-[4px] text-hlg-red-200 md:text-xs"
-                    : "cursor-pointer border-b-2 text-[4px] text-white md:text-xs"
-                }`}
+                    ? "cursor-pointer text-[4px] text-hlg-red-200 md:text-xs"
+                    : "cursor-pointer text-[4px] text-white md:text-xs"
+                } ${dayEvents.length > 1 ? "border-b-2" : ""}`}
               >
                 <div className="p-[3%] pt-[12.5%]">
                   {event.title}{" "}
