@@ -4,9 +4,6 @@ import Image from "next/image";
 import page from "@/public/events/calendarbackground.webp";
 import { useState } from "react";
 
-const date = new Date();
-const year = date.getFullYear();
-
 const Calendar = ({ events }: { events: EventProps[] }) => {
   const [date, setDate] = useState<Date | undefined>(new Date());
 
@@ -15,15 +12,11 @@ const Calendar = ({ events }: { events: EventProps[] }) => {
       <div className="absolute bottom-[13.5%] right-[8.25%] z-10 h-[75%] w-[75%]">
         <Image alt="background" src={page} className="object-contain" />
       </div>
-      <div className="absolute top-[-5.5%] z-50 flex flex-row space-x-3 font-asap-condensed text-xl md:top-[-3.5%] md:space-x-10 md:text-6xl">
+      <div className="absolute top-[-5.5%] z-30 flex flex-row space-x-3 font-asap-condensed text-xl md:top-[-3.5%] md:space-x-10 md:text-6xl">
         {Array.from({ length: 12 }).map((_, index: number) => (
           <p key={index}>C</p>
         ))}
       </div>
-      <div className="text-md absolute top-[5%] z-50 font-archivo-black md:text-4xl">
-        {year}
-      </div>
-
       <CalendarEvents
         mode="single"
         selected={date}
