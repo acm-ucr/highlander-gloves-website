@@ -82,7 +82,6 @@ function CalendarEvents({
     setCurrentDate(newDate);
     setCurrentMonth(newDate.getMonth());
     setCurrentYear(newDate.getFullYear());
-    console.log(currentDate, currMonth, currYear);
   };
 
   const prevDate = () => {
@@ -92,7 +91,6 @@ function CalendarEvents({
     setCurrentDate(newDate);
     setCurrentMonth(newDate.getMonth());
     setCurrentYear(newDate.getFullYear());
-    console.log(currentDate, currMonth, currYear);
   };
 
   const toggleModal = () => {
@@ -209,8 +207,8 @@ function CalendarEvents({
           nav_button: cn(
             "h-[2vw] w-[2vw] bg-transparent p-0 opacity-100 hover:opacity-50",
           ),
-          nav_button_previous: "absolute scale-x-[-1] left-[-1%]",
-          nav_button_next: "absolute right-[-1%]",
+          nav_button_previous: "absolute scale-x-[-1] left-[3%]",
+          nav_button_next: "absolute right-[3%]",
           table:
             "relative md:static right-[5.5%] w-full rounded-xl bg-hlg-light-gray",
           head_row:
@@ -231,13 +229,13 @@ function CalendarEvents({
           IconLeft: () => (
             <IoMdPlay
               onClick={prevDate}
-              className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-4"
+              className="h-[5px] w-[5px] text-white opacity-50 hover:opacity-0 md:h-4 md:w-8"
             />
           ),
           IconRight: () => (
             <IoMdPlay
               onClick={nextDate}
-              className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2"
+              className="h-[5px] w-[5px] text-white opacity-50 hover:opacity-0 md:h-4 md:w-8"
             />
           ),
           Day: (props) => (
