@@ -14,6 +14,7 @@ export interface EventProps {
   title: string;
   startTime: string;
   location: string;
+  description?: string;
 }
 
 function getLastDayOfMonth(date: Date) {
@@ -66,13 +67,32 @@ function CalendarEvents({
   const [selectedDate, setSelectedDate] = React.useState<Date | undefined>(
     undefined,
   );
+
+  const eventDays = events.map((event) => event.date);
   const [popupEvent, setPopupEvent] = useState<EventProps | null>(null);
+
+  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currYear, setCurrentYear] = useState(currentDate.getFullYear());
+
+  const nextDate = () => {
+    const newDate = new Date(currentDate);
+    newDate.setMonth(newDate.getMonth() + 1);
+
+    setCurrentDate(newDate);
+    setCurrentYear(newDate.getFullYear());
+  };
+
+  const prevDate = () => {
+    const newDate = new Date(currentDate);
+    newDate.setMonth(newDate.getMonth() - 1);
+
+    setCurrentDate(newDate);
+    setCurrentYear(newDate.getFullYear());
+  };
 
   const toggleModal = () => {
     setPopupEvent(null);
   };
-
-  const eventDays = events.map((event) => event.date);
 
   const modifiers = {
     hasEvent: (date: {
@@ -129,11 +149,11 @@ function CalendarEvents({
 
         {dayEvents.length > 0 && (
           <div
-            className={`${
+            className={`small-scrollbar ${
               isToday
                 ? "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-white md:top-[38%]"
                 : "absolute left-[5%] top-[43%] h-[50%] w-[90%] overflow-hidden rounded-sm bg-hlg-red-200 md:top-[38%]"
-            }`}
+            } ${dayEvents.length > 1 ? "overflow-y-scroll" : ""}`}
           >
             {dayEvents.map((event, index) => (
               <div
@@ -143,7 +163,7 @@ function CalendarEvents({
                   isToday
                     ? "cursor-pointer text-[4px] text-hlg-red-200 md:text-xs"
                     : "cursor-pointer text-[4px] text-white md:text-xs"
-                }`}
+                } ${dayEvents.length > 1 ? "border-b-2" : ""}`}
               >
                 <div className="p-[3%] pt-[12.5%]">
                   {event.title}{" "}
@@ -162,7 +182,11 @@ function CalendarEvents({
 
   return (
     <div>
+      <div className="text-md absolute right-[44.25%] top-[5%] z-30 font-archivo-black md:right-[46%] md:text-4xl">
+        {currYear}
+      </div>
       <DayPicker
+        month={currentDate}
         showOutsideDays={showOutsideDays}
         formatters={{
           formatWeekdayName: captionWeek,
@@ -180,8 +204,8 @@ function CalendarEvents({
           nav_button: cn(
             "h-[2vw] w-[2vw] bg-transparent p-0 opacity-100 hover:opacity-50",
           ),
-          nav_button_previous: "absolute scale-x-[-1] left-[-1%]",
-          nav_button_next: "absolute right-[-1%]",
+          nav_button_previous: "absolute scale-x-[-1] left-[3%]",
+          nav_button_next: "absolute right-[3%]",
           table:
             "relative md:static right-[5.5%] w-full rounded-xl bg-hlg-light-gray",
           head_row:
@@ -191,7 +215,7 @@ function CalendarEvents({
           row: "flex w-full mt-0",
           cell: "relative text-center p-0 border border-hlg-red-300",
           day_today: "bg-hlg-red-200 text-white",
-          day_outside: "day-outside text-bg-hlg-red-200 opacity-[57%]",
+          day_outside: "text-white",
           day_disabled: "text-neutral-500 opacity-50",
           day_range_middle:
             "aria-selected:bg-neutral-100 aria-selected:text-neutral-900",
@@ -200,10 +224,16 @@ function CalendarEvents({
         }}
         components={{
           IconLeft: () => (
-            <IoMdPlay className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
+            <IoMdPlay
+              onClick={prevDate}
+              className="h-[5px] w-[5px] text-white opacity-50 hover:opacity-0 md:h-4 md:w-8"
+            />
           ),
           IconRight: () => (
-            <IoMdPlay className="h-[2px] w-[2px] text-white opacity-50 hover:opacity-0 md:h-2 md:w-2" />
+            <IoMdPlay
+              onClick={nextDate}
+              className="h-[5px] w-[5px] text-white opacity-50 hover:opacity-0 md:h-4 md:w-8"
+            />
           ),
           Day: (props) => (
             <CustomDay
@@ -217,9 +247,28 @@ function CalendarEvents({
       />
       {popupEvent && (
         <Modal
-          answer={`${popupEvent.title}\nLocation: ${popupEvent.location}\nTime: ${new Date(
-            popupEvent.startTime,
-          ).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}`}
+          answer={
+            <>
+              <div>
+                <strong>{popupEvent.title}</strong>
+              </div>
+              <div>
+                <strong>Location:</strong> {popupEvent.location}
+              </div>
+              <div>
+                <strong>Time:</strong>{" "}
+                {new Date(popupEvent.startTime).toLocaleTimeString([], {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}
+              </div>
+              <div>
+                <strong>Date:</strong>{" "}
+                {new Date(popupEvent.startTime).toLocaleDateString()}
+              </div>
+              <div>{popupEvent.description || "No description available"}</div>
+            </>
+          }
           onClose={toggleModal}
         />
       )}
