@@ -35,13 +35,15 @@ const page = () => {
       }
 
       const today = new Date();
-      const timeMin = today.toISOString();
+      const timeMin = new Date(today);
+      timeMin.setMonth(today.getMonth() - 2);
+      const timeMinISO = timeMin.toISOString();
       const timeMax = new Date(today);
       timeMax.setMonth(today.getMonth() + 2);
       const timeMaxISO = timeMax.toISOString();
 
       const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&orderBy=startTime&singleEvents=true&timeMin=${encodeURIComponent(
-        timeMin,
+        timeMinISO,
       )}&timeMax=${encodeURIComponent(timeMaxISO)}`;
 
       try {

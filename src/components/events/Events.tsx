@@ -82,6 +82,13 @@ const Events = () => {
         Loading events...
       </p>
     );
+
+  if (events.length === 0)
+    return (
+      <p className="my-10 flex items-center justify-center font-anek-telegu text-3xl">
+        No Upcoming Events
+      </p>
+    );
   if (error)
     return (
       <p className="my-10 flex items-center justify-center font-anek-telegu text-3xl">
