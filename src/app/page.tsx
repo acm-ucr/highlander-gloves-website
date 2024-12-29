@@ -3,7 +3,6 @@ import GetStarted from "@/components/home/GetStarted";
 import VolunteerOpportunities from "@/components/home/VolunteerOpportunities";
 import WhyVolunteer from "@/components/home/WhyVolunteer";
 import Socials from "@/components/home/Socials";
-
 const Home = () => {
   return (
     <div className="flex w-full flex-col items-center gap-10">
