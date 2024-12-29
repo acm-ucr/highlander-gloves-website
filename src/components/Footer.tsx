@@ -45,11 +45,10 @@ const Footer = () => {
         <Image
           src={logo}
           alt="footer-logo"
-          className="relative left-[-40%] top-[22%] h-[115%] w-[115%] object-contain"
+          className="relative left-[-40%] top-[22%] hidden h-[115%] w-[115%] object-contain md:block"
         />
       </div>
 
-      {/* Links */}
       <div className="m-auto mb-0 mr-5 flex items-end gap-4 p-4 pr-0">
         {links.map((link, index) => (
           <Link
