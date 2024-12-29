@@ -66,7 +66,7 @@ const Navigation = () => {
             onMouseLeave={() => {
               setDropDownVisible(false);
             }}
-            className="flex h-full flex-row items-center text-black hover:text-white"
+            className={`flex ${selected === "news" || selected === "gallery" ? "text-white" : "text-black hover:text-white"} h-full flex-row items-center`}
           >
             MEDIA
             <IoMdArrowDropdown />
@@ -87,11 +87,20 @@ const Navigation = () => {
         >
           <Link
             href="/news"
-            className="w-full border-b-2 border-[#604949] py-2 hover:text-white"
+            className={`w-full ${selected === "news" ? "text-white" : "text-[#B5B5B5] hover:text-white"} border-b-2 border-[#604949] py-2 hover:text-white`}
+            onClick={() => {
+              setSelected("news");
+            }}
           >
             NEWS
           </Link>
-          <Link href="/gallery" className="py-2 hover:text-white">
+          <Link
+            href="/gallery"
+            className={`py-2 ${selected === "gallery" ? "text-white" : "text-[#B5B5B5] hover:text-white"} hover:text-white`}
+            onClick={() => {
+              setSelected("gallery");
+            }}
+          >
             GALLERY
           </Link>
         </div>
@@ -120,10 +129,30 @@ const Navigation = () => {
         ))}
         <div className="mb-2 ml-8 flex flex-row space-x-2">
           <p>Media |</p>
-          <Link href="/gallery" className="text-black hover:text-white">
+          <Link
+            href="/gallery"
+            onClick={() => {
+              setSelected("gallery");
+              handleMobileMenu();
+            }}
+            className={`py-1 ${
+              selected === "gallery"
+                ? "text-white"
+                : "text-black hover:text-white"
+            }`}
+          >
             Gallery
           </Link>
-          <Link href="/news" className="text-black hover:text-white">
+          <Link
+            href="/news"
+            onClick={() => {
+              setSelected("news");
+              handleMobileMenu();
+            }}
+            className={`py-1 ${
+              selected === "news" ? "text-white" : "text-black hover:text-white"
+            }`}
+          >
             News
           </Link>
         </div>
