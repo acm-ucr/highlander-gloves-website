@@ -29,13 +29,13 @@ const Socials = () => {
       <Circle
         icon={<FaDiscord />}
         link="https://discord.com/invite/NV5dX8ezYw"
-        className="left-[10%] top-[50%] text-4xl xl:left-[13.5%] xl:top-[45%] xl:text-8xl 2xl:left-[14%] 2xl:top-[46%] 2xl:text-9xl"
+        className="left-[10%] top-[50%] text-4xl xl:left-[13.5%] xl:top-[45%] xl:text-8xl 2xl:left-[17%] 2xl:top-[54%] 2xl:text-9xl"
       />
 
       <Circle
         icon={<FaTiktok />}
         link="https://www.tiktok.com/@HighlanderGloves"
-        className="-bottom-[10%] left-[32.5%] text-4xl xl:-bottom-[15%] xl:left-[31.5%] xl:text-8xl 2xl:bottom-[7%] 2xl:left-[32%] 2xl:text-9xl"
+        className="-bottom-[10%] left-[32.5%] text-4xl xl:-bottom-[15%] xl:left-[31.5%] xl:text-8xl 2xl:-bottom-[3%] 2xl:left-[34%] 2xl:text-9xl"
       />
 
       <Circle
@@ -47,13 +47,13 @@ const Socials = () => {
       <Circle
         icon={<FaYoutube />}
         link="https://www.youtube.com/channel/UC8v90kTZeMn7tieSbISs-SQ/feed?view_as=public"
-        className="-bottom-[6%] right-[6%] text-4xl xl:-bottom-[20%] xl:right-[27%] xl:text-8xl 2xl:bottom-[7%] 2xl:right-[27.5%] 2xl:text-9xl"
+        className="-bottom-[6%] right-[6%] text-4xl xl:-bottom-[20%] xl:right-[27%] xl:text-8xl 2xl:bottom-[1%] 2xl:right-[29%] 2xl:text-9xl"
       />
 
       <Circle
         icon={<FaFacebookF />}
         link="https://www.facebook.com/groups/HighlanderGloves/"
-        className="right-[1%] top-[35%] text-4xl xl:right-[10%] xl:top-[50%] xl:text-8xl 2xl:right-[13%] 2xl:top-[46%] 2xl:text-9xl"
+        className="right-[1%] top-[35%] text-4xl xl:right-[10%] xl:top-[50%] xl:text-8xl 2xl:right-[10%] 2xl:top-[56%] 2xl:text-9xl"
       />
     </div>
   );
