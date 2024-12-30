@@ -8,7 +8,7 @@ const Circle = (props: {
     <Link
       href={props.link}
       target="_blank"
-      className={`absolute rounded-full border-[3px] bg-hlg-dark-gray p-4 duration-200 hover:scale-105 hover:cursor-pointer xl:p-8 ${props.className}`}
+      className={`absolute rounded-full border-2 bg-hlg-dark-gray p-4 duration-200 hover:scale-105 hover:cursor-pointer md:border-[3px] xl:p-8 ${props.className}`}
     >
       {props.icon}
     </Link>
