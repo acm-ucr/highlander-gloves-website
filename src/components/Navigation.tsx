@@ -16,15 +16,15 @@ const Navigation = () => {
   const [animation, setAnimation] = useState("hidden");
 
   const handleMobileMenu = () => {
-   setShowMobileMenu(!showMobileMenu);
-   if (showMobileMenu) setAnimation("animate-expand");
-   else setAnimation("animate-collapse");
+    setShowMobileMenu(!showMobileMenu);
+    if (showMobileMenu) setAnimation("animate-expand");
+    else setAnimation("animate-collapse");
   };
 
   return (
     <div className="top-0 z-50 h-[10vh] font-archivo-narrow text-2xl font-bold">
       <div className="flex h-full items-center justify-between bg-hlg-red-200 px-[1%]">
-        <Link className="p-0 flex items-center" href="/">
+        <Link className="flex items-center p-0" href="/">
           <Image
             className="w-[15%] object-contain"
             src={Logo}
@@ -39,14 +39,12 @@ const Navigation = () => {
 
         {/* desktop menu options */}
         <div className="m-auto mr-0 hidden h-full flex-row items-center space-x-8 md:flex">
-          {items.map(({name, link}, index) => (
+          {items.map(({ name, link }, index) => (
             <Link
               key={index}
               href={link}
               className={`${
-                pathName === link
-                  ? "text-white"
-                  : "text-black hover:text-white"
+                pathName === link ? "text-white" : "text-black hover:text-white"
               }`}
             >
               {name}
@@ -97,14 +95,12 @@ const Navigation = () => {
       <div
         className={`m-auto flex flex-col border-2 border-black bg-hlg-red-200 font-archivo-black md:hidden ${showMobileMenu ? animation : "hidden"}`}
       >
-        {items.map(({name, link}, index) => (
+        {items.map(({ name, link }, index) => (
           <Link
             href={link}
             key={index}
             className={`py-1 pl-8 ${
-              pathName === link
-                ? "text-white"
-                : "text-black hover:text-white"
+              pathName === link ? "text-white" : "text-black hover:text-white"
             }`}
           >
             {name}
@@ -125,7 +121,9 @@ const Navigation = () => {
           <Link
             href="/news"
             className={`py-1 ${
-              pathName === "/news" ? "text-white" : "text-black hover:text-white"
+              pathName === "/news"
+                ? "text-white"
+                : "text-black hover:text-white"
             }`}
           >
             News
